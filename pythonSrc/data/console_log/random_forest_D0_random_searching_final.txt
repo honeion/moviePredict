@@ -1,0 +1,76 @@
+C:\Users\KSWLab2\PycharmProjects\movieProject\venv\Scripts\python.exe C:/Users/KSWLab2/Desktop/modifiedMovieProject/source/10_movie_modeling_RandomForest.py
+Target 제외 DataSet Shape: (500, 15)
+훈련 데이터셋 Shape: (400, 14)
+훈련 타겟 Shape: (400,)
+테스트 데이터셋 Shape: (100, 14)
+테스트 타겟 Shape: (100,)
+-------------------------------------------------- 
+ Default - 전체 15개 변수 사용
+	 Train Error            :  238292336009.8
+	 Validation Error       :  1571657186210.24
+	 테스트 셋 예측 정확도 :  67.64 %.
+--------------------------------------------------
+변수: actor_score          중요도: 0.53153
+변수: userCount            중요도: 0.31
+변수: director_score       중요도: 0.05128
+변수: starScore            중요도: 0.02876
+변수: showTm_score         중요도: 0.01295
+변수: repGenreNm_score     중요도: 0.01247
+변수: previous_screen      중요도: 0.01098
+변수: previous_audience    중요도: 0.00877
+변수: previous_show        중요도: 0.00769
+변수: openDt_score         중요도: 0.00744
+변수: distributor_score    중요도: 0.00654
+변수: prdtYear_score       중요도: 0.0049
+변수: repNationNm_score    중요도: 0.00442
+변수: watchGradeNm_score   중요도: 0.00228
+--------------------------------------------------
+무작위 서칭 튜닝 결과 (random_Search_RF) - features 15개
+	 Train Error            :  253724197696.46
+	 Validation Error       :  1579326527891.89
+	 테스트 셋 예측 정확도 :  69.92 %.
+향상도 of 3.36%.
+그리드 서칭 튜닝 결과 (grid_Search_RF) - features 15개
+	 Train Error            :  49914871844.15
+	 Validation Error       :  1615769255896.02
+	 테스트 셋 예측 정확도 :  69.97 %.
+향상도 of 3.44%.
+-------------------------------------------------- 
+ Default - 랜덤포레스트에서 찾은 중요 변수 6개
+	 Train Error            :  198582171994.08
+	 Validation Error       :  1516715927205.97
+	 테스트 셋 예측 정확도 :  65.39 %.
+향상도 of -3.33%.
+그리드 서칭 튜닝 결과 (grid_Search_default_RF_95) - features 6개, 중요도 95% 차지
+	 Train Error            :  157496020048.83
+	 Validation Error       :  1478619512409.87
+	 테스트 셋 예측 정확도 :  68.72 %.
+향상도 of 1.58%.
+--------------------------------------------------
+-------------------------------------------------- 
+ Default - 랜덤포레스트에서 찾은 중요 변수 13개
+	 Train Error            :  204080152798.62
+	 Validation Error       :  1722254265000.39
+	 테스트 셋 예측 정확도 :  65.67 %.
+향상도 of -2.92%.
+그리드 서칭 튜닝 결과 (grid_Search_default_RF_99) - features 13개, 중요도 99% 차지
+	 Train Error            :  0.0
+	 Validation Error       :  1592940339732.13
+	 테스트 셋 예측 정확도 :  69.36 %.
+향상도 of 2.53%.
+--------------------------------------------------
+{'model': ['default'], 'accuracy': [67.64], 'train_error': [238292336009.8], 'validation_error': [1571657186210.24], 'n_features': [14], 'n_trees': [10], 'differenceTEtoVE': [1333364850200.43]}
+          model  accuracy   ...     n_features  n_trees
+0       default     67.64   ...             14       10
+1      randomCV     69.92   ...             14       50
+2  default_grid     69.97   ...             14       50
+3    important6     65.39   ...              6       10
+4       grid_95     68.72   ...              6     1000
+5    important6     65.67   ...             13       10
+6       grid_99     69.36   ...             13      200
+
+[7 rows x 6 columns]
+--------------------------------------------------
+grid_search_99 resultAll
+
+Process finished with exit code 0

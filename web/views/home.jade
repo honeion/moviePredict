@@ -1,0 +1,207 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title 덕후의 예감 - 영화흥행예측
+    // Bootstrap core CSS
+    link(href='vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='css/modern-business.css', rel='stylesheet')
+  body
+    // Navigation
+    nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+      .container
+        a.navbar-brand(href='home') 영화흥행예측
+        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href='about') About
+            li.nav-item
+              a.nav-link(href='newest') Newest
+            li.nav-item
+              a.nav-link(href='prediction') Prediction
+            //- li.nav-item.dropdown
+            //-   a#navbarDropdownPortfolio.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            //-     | Portfolio
+            //-   .dropdown-menu.dropdown-menu-right(aria-labelledby='navbarDropdownPortfolio')
+            //-     a.dropdown-item(href='portfolio-1-col.html') 1 Column Portfolio
+            //-     a.dropdown-item(href='portfolio-2-col.html') 2 Column Portfolio
+            //-     a.dropdown-item(href='portfolio-3-col.html') 3 Column Portfolio
+            //-     a.dropdown-item(href='portfolio-4-col.html') 4 Column Portfolio
+            //-     a.dropdown-item(href='portfolio-item.html') Single Portfolio Item
+            //- li.nav-item.dropdown
+            //-   a#navbarDropdownBlog.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            //-     | Blog
+            //-   .dropdown-menu.dropdown-menu-right(aria-labelledby='navbarDropdownBlog')
+            //-     a.dropdown-item.active(href='blog-home-1.html') Blog Home 1
+            //-     a.dropdown-item(href='blog-home-2.html') Blog Home 2
+            //-     a.dropdown-item(href='blog-post.html') Blog Post
+            //- li.nav-item.dropdown
+            //-   a#navbarDropdownBlog.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            //-     | Other Pages
+            //-   .dropdown-menu.dropdown-menu-right(aria-labelledby='navbarDropdownBlog')
+            //-     a.dropdown-item(href='full-width.html') Full Width Page
+            //-     a.dropdown-item(href='sidebar.html') Sidebar Page
+            //-     a.dropdown-item(href='faq.html') FAQ
+            //-     a.dropdown-item(href='404.html') 404
+            //-     a.dropdown-item(href='pricing.html') Pricing Table
+      //- span.carousel-control-next-icon(aria-hidden='true')
+    span.carousel-control-next-icon(aria-hidden='true')
+    header
+      #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+        .carousel-inner(role='listbox', align='center')
+          // Slide One - Set the background image for this slide in the line below
+          img(src='./main2.jpg ', style='margin-right: auto;margin-left: auto;max-width: 60%;height:auto; ')
+    div(style='justify-content: center;display: flex;flex-direction: row;text-align: right ')
+      img#image_search(src='https://3.bp.blogspot.com/-2CWX7kIpob4/WZgVXt3yTQI/AAAAAAAAACM/N1eGT1OD7rklb4GtsadoxYRyWZoR_aI0gCLcBGAs/s1600/seo-1970475_960_720.png ', style='width: 36px; height: 36px; margin-right: 5px; ', onclick="var inputBox=document.getElementById(\
+      'input_text_search'); inputBox.style.width='500px' ; inputBox.style.paddingLeft='3px' ; inputBox.value='' ; inputBox.focus(); ")
+      //onsubmit='return false' 엔터를 눌러도 자동 submit되지 않게 하기 위해
+      form(action='/search', method='post', id='inputTextSubmit', onsubmit='return false')
+        script.
+          function checkInputData(value){
+            //검색어가 없어가 스페이스일 때 엔터를 눌러도 제출이 되지 않도록 함
+            if(value != "" && value != " "){
+              document.getElementById('inputTextSubmit').submit();
+            }
+          }
+        //- -var dblength = movieNmArray.length;
+        //- script.
+        //-   function checkDataBase(value){
+        //-     var tempDb = !{JSON.stringify(movieNmArray)}; //server.js에서 넘긴 배열을 script에서 받기 위함
+        //-     var flag = true;
+        //-     for(var i=0; i<#{dblength}-1; i++){
+        //-       if(value == tempDb[i]){
+        //-         flag = false;
+        //-         document.getElementById('inputTextSubmit').submit();
+        //-         break;
+        //-       }
+        //-     }
+        //-     if(flag){
+        //-       alert("검색한 영화가 없습니다.")
+        //-     }
+        //-   }
+        input#input_text_search(placeholder='검색어를 입력하세요 ', type='text ', name='searchContent', onblur="this.style.width='0px' ; this.style.paddingLeft='0px'\
+        ; ", style=' border: none; background-color: rgba(0,0,0,0); color: #666666; border-bottom: solid 2px #333; outline:\
+        none; width: 0px; transition: all 0.5s; ', onkeydown='if(event.keyCode==13){checkInputData(this.value)}')
+        //'if(event.keyCode==13){//alert(this.value);\} '  'javascript: checkInputData(this.value)')
+    // Page Content
+    .container
+      h1.my-4(style='text-align:center ')
+        br
+        br
+      // Portfolio Section
+      .row
+        -var lastPageNumber = Math.ceil((dblength-1)/queryLimit); //DB 마지막에 null값이 들어있어서 -1을 해줌
+        -var count = database.length;
+        -if(currentPageNumber==lastPageNumber && ((dblength-1)%queryLimit)!=0){ //마지막 번호 페이지에서 DB의 마지막 null값을 없애주기 위한 작업
+          -count = count-1;
+        -}
+        -for(var i=0; i<count; i++){  //서버로부터 넘겨받은 영화 정보를 차례대로 출력함
+            .col-lg-4.col-sm-6.portfolio-item
+                .card.h-100
+                    //포스터나 영화이름을 클릭하면 해당 영화정보를 post방식으로 form을 제출함
+                    //- form(action='/gotoMovieInfo', method='post')
+                    -var movieInfo = [database[i].movieCd, database[i].story, database[i].poster, database[i].video, database[i].movieNm, database[i].director, database[i].actor1, database[i].actor2, database[i].actor3, database[i].repNationNm, database[i].repGenreNm, database[i].showTm, database[i].watchGradeNm, database[i].openDt, database[i].prediction, database[i].realValue, database[i].accuracy, database[i].predictionGraph, database[i].D0_prediction];
+                    //name: server에서 받을 변수 이름, value: server로 넘길 값
+                    //- input(type='image', name='clickedMovie', value=movieInfo, src=database[i].poster, style="width: 100%; border-top-left-radius: calc(.25rem - 1px); border-top-right-radius: calc(.25rem - 1px);")
+                    a(href='javascript: submitForm(#{i})')
+                        img.card-img-top(src=database[i].poster, alt=' ')
+                    .card-body
+                        h4.card-title
+                            //jade에서 선언한 변수를 script에서 사용하기 위해 #{} 안에 담음
+                            a(href='javascript: submitForm(#{i})')=database[i].movieNm
+                            form(action='/gotoMovieInfo', method='post', id=i)
+                              input(type='hidden', name='clickedMovie', value=movieInfo)
+                            script.
+                              function submitForm(j) {
+                                document.getElementById(j).submit();
+                              }
+                        p.card-text
+                            | 감독 : 
+                            =database[i].director
+                            br
+                            | 배우 : 
+                            -var actor=''
+                            -if(database[i].actor1 != ' ')
+                                -actor += database[i].actor1
+                            -if(database[i].actor2 != ' ')
+                                -actor += ', '+database[i].actor2
+                            -if(database[i].actor3 != ' ')
+                                -actor += ', '+database[i].actor3
+                            =actor
+                            br
+                            | 개봉일 : 
+                            =database[i].openDt
+                            br
+                            | 상영시간 : 
+                            =database[i].showTm
+                            br
+                            | 등급 : 
+                            =database[i].watchGradeNm
+        -}
+
+
+      // Pagination
+      ul.pagination.justify-content-center
+        //첫 페이지로 가는 버튼
+        li.page-item
+          form(action='/changePage', method='post', id='firstPage')
+            input(type='hidden', name='clickedNumber', value=1)
+          a.page-link(href='javascript: submitForm("firstPage")', aria-label='First')
+            span(aria-hidden='true') «
+            span.sr-only First
+        -var lastPageNumber = Math.ceil((dblength-1)/queryLimit);
+        -if(currentPageNumber-4 < 1){ //1~4 누를 때
+          -for(var i=0; i<9; i++){
+            form(action='/changePage', method='post', id='page'+i)
+              input(type='hidden', name='clickedNumber', value=i+1)
+            li.page-item
+              -if(i+1 == currentPageNumber) //현재 페이지 번호의 버튼 배경을 파란색으로 적용
+                a.page-link(href='javascript: submitForm("page"+#{i})', style='color: #fff; background-color: #007bff91')=i+1
+              -else
+                a.page-link(href='javascript: submitForm("page"+#{i})')=i+1
+          -}
+        -}else if(currentPageNumber+4 > lastPageNumber){  //마지막 페이지-3 ~ 마지막 페이지 누를 때
+          -for(var i=0; i<9; i++){
+            form(action='/changePage', method='post', id='page'+i)
+              input(type='hidden', name='clickedNumber', value=(lastPageNumber-8)+i)
+            li.page-item
+              -if((lastPageNumber-8)+i == currentPageNumber)
+                //color: #000000
+                a.page-link(href='javascript: submitForm("page"+#{i})', style='color: #fff; background-color: #007bff91')=(lastPageNumber-8)+i
+              -else
+                a.page-link(href='javascript: submitForm("page"+#{i})')=(lastPageNumber-8)+i
+          -}
+        -}else{ //나머지 페이지 버튼 누를 때
+          -for(var i=0; i<9; i++){
+            form(action='/changePage', method='post', id='page'+i)
+              input(type='hidden', name='clickedNumber', value=currentPageNumber+(i-4))
+            li.page-item
+              -if(currentPageNumber+(i-4) == currentPageNumber)
+                a.page-link(href='javascript: submitForm("page"+#{i})', style='color: #fff; background-color: #007bff91')=currentPageNumber+(i-4)
+              -else
+                a.page-link(href='javascript: submitForm("page"+#{i})')=currentPageNumber+(i-4)
+          -}
+        -}
+        //마지막 페이지로 가는 버튼
+        li.page-item
+          form(action='/changePage', method='post', id='lastPage')
+            input(type='hidden', name='clickedNumber', value=lastPageNumber)
+          a.page-link(href='javascript: submitForm("lastPage")', aria-label='Last')
+            span(aria-hidden='true') »
+            span.sr-only Last
+  
+      // /.row
+      // Footer
+      footer.py-5.bg-dark
+        .container
+          p.m-0.text-center.text-white Copyright © mobisys 2018
+        // /.container
+      // Bootstrap core JavaScript
+      script(src='vendor/jquery/jquery.min.js ')
+      script(src='vendor/bootstrap/js/bootstrap.bundle.min.js ')

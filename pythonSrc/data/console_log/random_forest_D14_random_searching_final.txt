@@ -1,0 +1,117 @@
+C:\Users\KSWLab2\PycharmProjects\movieProject\venv\Scripts\python.exe C:/Users/KSWLab2/Desktop/modifiedMovieProject/source/12_movie_modeling_RandomForest_D14.py
+Target 제외 DataSet Shape: (1800, 57)
+훈련 데이터셋 Shape: (1440, 56)
+훈련 타겟 Shape: (1440,)
+테스트 데이터셋 Shape: (360, 56)
+테스트 타겟 Shape: (360,)
+-------------------------------------------------- 
+ Default - 전체 56개 변수 사용
+	 Train Error            :  31432456361.97
+	 Validation Error       :  128073148262.09
+	 테스트 셋 예측 정확도 :  86.32 %.
+--------------------------------------------------
+변수: audience_D11         중요도: 0.73013
+변수: actor_score          중요도: 0.07624
+변수: audience_D13         중요도: 0.04955
+변수: audience_D8          중요도: 0.03349
+변수: audience_D14         중요도: 0.03342
+변수: userCount            중요도: 0.02805
+변수: audience_D4          중요도: 0.00878
+변수: audience_D7          중요도: 0.00576
+변수: audience_D2          중요도: 0.00292
+변수: audience_D5          중요도: 0.00288
+변수: audience_D9          중요도: 0.0028
+변수: previous_screen      중요도: 0.00257
+변수: audience_D6          중요도: 0.00232
+변수: audience_D1          중요도: 0.00188
+변수: audience_D12         중요도: 0.00172
+변수: show_D1              중요도: 0.00166
+변수: show_D11             중요도: 0.00145
+변수: openDt_score         중요도: 0.00134
+변수: audience_D3          중요도: 0.00124
+변수: previous_show        중요도: 0.00113
+변수: show_D4              중요도: 0.00079
+변수: audience_D10         중요도: 0.00072
+변수: director_score       중요도: 0.00071
+변수: show_D8              중요도: 0.00069
+변수: previous_audience    중요도: 0.00065
+변수: show_D12             중요도: 0.0006
+변수: screen_D5            중요도: 0.00048
+변수: show_D2              중요도: 0.00044
+변수: repGenreNm_score     중요도: 0.00043
+변수: screen_D9            중요도: 0.00043
+변수: screen_D10           중요도: 0.00039
+변수: show_D10             중요도: 0.00039
+변수: screen_D14           중요도: 0.00033
+변수: show_D9              중요도: 0.00031
+변수: starScore            중요도: 0.00029
+변수: screen_D13           중요도: 0.00027
+변수: distributor_score    중요도: 0.00026
+변수: show_D14             중요도: 0.00022
+변수: screen_D3            중요도: 0.00021
+변수: screen_D12           중요도: 0.00021
+변수: show_D13             중요도: 0.00021
+변수: screen_D1            중요도: 0.00018
+변수: screen_D7            중요도: 0.00018
+변수: screen_D8            중요도: 0.00017
+변수: screen_D11           중요도: 0.00017
+변수: screen_D6            중요도: 0.00016
+변수: screen_D4            중요도: 0.00015
+변수: repNationNm_score    중요도: 0.00013
+변수: screen_D2            중요도: 0.00013
+변수: watchGradeNm_score   중요도: 0.00012
+변수: show_D3              중요도: 0.0001
+변수: prdtYear_score       중요도: 8e-05
+변수: show_D7              중요도: 7e-05
+변수: show_D5              중요도: 3e-05
+변수: showTm_score         중요도: 1e-05
+변수: show_D6              중요도: 1e-05
+--------------------------------------------------
+무작위 서칭 튜닝 결과 (random_Search_RF) - features 56개
+	 Train Error            :  35903153474.51
+	 Validation Error       :  97958551274.57
+	 테스트 셋 예측 정확도 :  88.2 %.
+향상도 of 2.17%.
+그리드 서칭 튜닝 결과 (grid_Search_RF) - features 56개
+	 Train Error            :  22917080205.99
+	 Validation Error       :  97722004585.14
+	 테스트 셋 예측 정확도 :  88.18 %.
+향상도 of 2.15%.
+-------------------------------------------------- 
+ Default - 랜덤포레스트에서 찾은 중요 변수 6개
+	 Train Error            :  28696475523.45
+	 Validation Error       :  99132010491.72
+	 테스트 셋 예측 정확도 :  76.99 %.
+향상도 of -10.82%.
+그리드 서칭 튜닝 결과 (grid_Search_default_RF_95) - features 6개, 중요도 95% 차지
+	 Train Error            :  43835662070.77
+	 Validation Error       :  100568711702.45
+	 테스트 셋 예측 정확도 :  88.11 %.
+향상도 of 2.07%.
+--------------------------------------------------
+-------------------------------------------------- 
+ Default - 랜덤포레스트에서 찾은 중요 변수 21개
+	 Train Error            :  32155914068.92
+	 Validation Error       :  126275942326.78
+	 테스트 셋 예측 정확도 :  86.15 %.
+향상도 of -0.20%.
+그리드 서칭 튜닝 결과 (grid_Search_default_RF_99) - features 21개, 중요도 99% 차지
+	 Train Error            :  22031532010.68
+	 Validation Error       :  97126121439.82
+	 테스트 셋 예측 정확도 :  88.35 %.
+향상도 of 2.35%.
+--------------------------------------------------
+{'model': ['default'], 'accuracy': [86.32], 'train_error': [31432456361.97], 'validation_error': [128073148262.09], 'n_features': [56], 'n_trees': [10], 'differenceTEtoVE': [96640691900.12]}
+          model  accuracy   ...     n_features  n_trees
+0       default     86.32   ...             56       10
+1      randomCV     88.20   ...             56     3000
+2  default_grid     88.18   ...             56     2000
+3    important6     76.99   ...              6       10
+4       grid_95     88.11   ...              6     2000
+5   important21     86.15   ...             21       10
+6       grid_99     88.35   ...             21      300
+
+[7 rows x 6 columns]
+--------------------------------------------------
+
+Process finished with exit code 0

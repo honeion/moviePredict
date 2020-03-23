@@ -1,0 +1,267 @@
+doctype html
+html(lang='en', style='width: 100%;height: 100%')
+    head
+        meta(charset='utf-8')
+        |   
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        |   
+        meta(name='description', content='')
+        |   
+        meta(name='author', content='')
+        |   
+        title 덕후의 예감 - 영화흥행예측
+        // Bootstrap core CSS
+        // <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        link(href='vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+        // Custom styles for this template
+        link(href='css/modern-business.css', rel='stylesheet')
+    body(style='width: 100%;height: 100%')
+        // Navigation
+        nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+            .container
+                a.navbar-brand(href='home') 영화흥행예측
+                |       
+                button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                |       
+                #navbarResponsive.collapse.navbar-collapse
+                    ul.navbar-nav.ml-auto
+                        li.nav-item
+                            a.nav-link(href='./about') About        
+                        li.nav-item
+                            a.nav-link(href='newest') Newest
+                        li.nav-item
+                            a.nav-link(href='prediction') Prediction
+
+        // Page Content
+        .container
+            // Page Heading/Breadcrumbs
+            h1.mt-4.mb-3(style='font-size: 50px; font-family: 문체부 훈민정음체')=movieNm
+            |     
+            ol.breadcrumb(style='background-color: #44484c; height: 1px;')
+                li.breadcrumb-item.active(style='height: 1px;')
+            // Intro Content
+            .row
+                .col-lg-6(style='align-self: center; text-align: center')
+                    img.img-fluid.rounded.mb-4(src=poster, alt='', width='400', height='auto', style='align-items: center')
+                |       
+                .col-lg-6(style='max-width: 1000px;')
+                    h2(style='font-size:10px')
+                    |         
+                    //- .col-lg-6(style='align-self: center; text-align: left;')
+                    table(width='100%', style='text-align: center; font-family: 휴먼매직체', align='center')
+                        tr(style='font-size: 1vw; width: 500px; font-weight: bold; font-size: 60px; font-family:휴먼모음T')
+                            td(colspan='2') 실제 관객 수
+                            |               
+                            td
+                        tr(style='width: 500')              
+                            td(colspan='2', style='font-size: 1vw;font-size: 40px')
+                                =realValue+" 명"
+                                br
+                                h2(style='font-size:20px') &nbsp
+                            td
+                        //, onclick='alert("123123")'
+                        tr(style='font-size: 1vw; width: 500px; font-weight: bold; font-size: 60px; font-family:휴먼모음T')
+                            td(colspan='2') 예측 관객 수
+                            |               
+                            td
+                        tr(style='width: 500')              
+                            td(colspan='2', style='font-size: 1vw;font-size: 40px')
+                                =prediction+" 명"
+                                br
+                                h2(style='font-size:20px') &nbsp
+                            td
+                        tr(style='font-size: 1vw; width: 500px; font-weight: bold; font-size: 60px; font-family:휴먼모음T')
+                            td(colspan='2') 예측률
+                            |               
+                            td
+                        tr(style='width: 500')              
+                            td(colspan='2', style='font-size: 1vw;font-size: 40px')
+                                =accuracy+" %"
+                            td
+                        
+            ol.breadcrumb(style='background-color: #44484c; height: 1px;')
+            //- li.breadcrumb-item.active(style='height: 1px;')
+            // /.row
+            
+            h2(style='font-size:40px; text-align:center; font-weight:bold; font-family:휴먼모음T; margin-bottom:0') 개봉 전 예측
+                br 
+            h5(style='font-size:0.1px;text-align:center')
+                br
+            -var caseIndex = D0_prediction.slice(0,2)
+            case caseIndex
+                when '00'
+                    h2(style='font-size:35px;text-align:center;font-family:휴먼모음T') 원금회수는 할까요? 이 영화는 50만 명 미만의 관객이 볼 것 같아요!
+                    img(src='/energy/1.png', align='center' ,style='padding-left:5%;align:center;margin-left:auto;margin-right:auto;display:block',width='100%', height='100%')
+            
+                when '01'
+                    h2(style='font-size:35px;text-align:center;font-family:휴먼모음T') 곧 IPTV에서 볼수있을 것 같아요. 50만 명 이상의 관객이 볼 것 같아요!
+                    img(src='/energy/2.png', align='center' ,style='padding-left:5%;align:center;margin-left:auto;margin-right:auto;display:block',width='100%', height='100%')
+            
+                when '02'
+                    h2(style='font-size:35px;text-align:center;font-family:휴먼모음T') 시간이 남는다면 본다! 이 영화는 100만 명 이상의 관객이 볼 것 같아요!
+                    img(src='/energy/3.png', align='center' ,style='padding-left:5%;align:center;margin-left:auto;margin-right:auto;display:block',width='100%', height='100%')
+            
+                when '03'
+                    h2(style='font-size:35px;text-align:center;font-family:휴먼모음T') 흥행은 글쎄요? 이 영화는 200만 명 이상의 관객이 볼 것 같아요!
+                    img(src='/energy/4.png', align='center' ,style='padding-left:5%;align:center;margin-left:auto;margin-right:auto;display:block',width='100%', height='100%')
+            
+                when '04'
+                    h2(style='font-size:35px;text-align:center;font-family:휴먼모음T') 나쁘지 않아요! 이 영화는 300만 명 이상의 관객이 볼 것 같아요!
+                    img(src='/energy/5.png', align='center' ,style='padding-left:5%;align:center;margin-left:auto;margin-right:auto;display:block',width='100%', height='100%')
+            
+                when '05'
+                    h2(style='font-size:35px;text-align:center;font-family:휴먼모음T') 재밌는 영화! 이 영화는 400만 명 이상의 관객이 볼 것 같아요!
+                    img(src='/energy/6.png', align='center' ,style='padding-left:5%;align:center;margin-left:auto;margin-right:auto;display:block',width='100%', height='100%')
+            
+                when '06'
+                    h2(style='font-size:35px;text-align:center;font-family:휴먼모음T') 자꾸 눈길이 가는 영화! 이 영화는 500만 명 이상의 관객이 볼 것 같아요!
+                    img(src='/energy/7.png', align='center' ,style='padding-left:5%;align:center;margin-left:auto;margin-right:auto;display:block',width='100%', height='100%')
+            
+                when '07'
+                    h2(style='font-size:35px;text-align:center;font-family:휴먼모음T') 꿀잼영화!! 이 영화는 600만 명 이상의 관객이 볼 것 같아요!
+                    img(src='/energy/8.png', align='center' ,style='padding-left:5%;align:center;margin-left:auto;margin-right:auto;display:block',width='100%', height='100%')
+            
+                when '08'
+                    h2(style='font-size:35px;text-align:center;font-family:휴먼모음T') 성공한영화!! 이 영화는 700만 명 이상의 관객이 볼 것 같아요!
+                    img(src='/energy/9.png', align='center' ,style='padding-left:5%;align:center;margin-left:auto;margin-right:auto;display:block',width='100%', height='100%')
+            
+                when '09'
+                    h2(style='font-size:35px;text-align:center;font-family:휴먼모음T') 흥행영화!! 이 영화는 800만 명 이상의 관객이 볼 것 같아요!
+                    img(src='/energy/10.png', align='center' ,style='padding-left:5%;align:center;margin-left:auto;margin-right:auto;display:block',width='100%', height='100%')
+            
+                when '10'
+                    h2(style='font-size:35px;text-align:center;font-family:휴먼모음T') 대박영화!! 이 영화는 900만 명 이상의 관객이 볼 것 같아요!
+                    img(src='/energy/11.png', align='center' ,style='padding-left:5%;align:center;margin-left:auto;margin-right:auto;display:block',width='100%', height='100%')
+            
+                when '11'
+                    h2(style='font-size:35px;text-align:center;font-family:휴먼모음T') 초대박영화!! 이 영화는 1000만 명 이상의 관객이 볼 것 같아요!
+                    img(src='/energy/12.png', align='center' ,style='padding-left:5%;align:center;margin-left:auto;margin-right:auto;display:block',width='100%', height='100%')
+            
+            h2(style='font-size: 16px; font-family: 휴먼모음T; text-align: right')
+                br
+                br
+                |* 위 결과는 classifier를 사용한 것
+            hr(size='5')
+            .row
+                table(align='center')
+                    tr
+                        td(style='text-align: center;')
+                            h2(style='font-size:50px') &nbsp
+                            h2(style='font-size: 50px; font-family: 휴먼모음T') 줄거리
+                            hr(size='5')
+                    |         
+                    tr                    
+                        td(style='color: #888; text-align: center ;font-size: 20px; ')
+                            //한줄 출력하고 br로 개행
+                            -for(var i=0; i<story.length; i++)
+                                =story[i]
+                                br
+                //
+                    <div class="col-lg-6" style="width: 100%">
+                    </div>
+            // Team Members
+            h2(style='font-size: 50px; font-family: 휴먼모음T; text-align: center')
+                br
+                | 세부사항
+            |     
+            .row
+                table(width='80%', align='center', style='font-size: 25px')
+                    tr
+                        td(style='text-align: right;')
+                            h4(style='font-size: 25px; margin-bottom:0')
+                                | 감&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp독 &nbsp:&nbsp&nbsp
+                        |           
+                        td
+                            =director
+                    |         
+                    tr
+                        -if(actor1 != ' '){
+                            td(style='text-align: right;')
+                                h4(style='font-size: 25px; margin-bottom:0')
+                                    | 배&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp우 &nbsp:&nbsp&nbsp
+                            |           
+                            td
+                                -var actor=''
+                                -if(actor1 != ' ')
+                                    -actor += actor1
+                                -if(actor2 != ' ')
+                                    -actor += ', '+actor2
+                                -if(actor3 != ' ')
+                                    -actor += ', '+actor3
+                                =actor
+                        -}
+                    |         
+                    tr
+                        td(style='text-align: right;')
+                            h4(style='font-size: 25px; margin-bottom:0')
+                                | 개&nbsp&nbsp봉&nbsp&nbsp일 &nbsp:&nbsp&nbsp
+                        |           
+                        td
+                            =openDt
+                    |         
+                    tr
+                        td(style='text-align: right;')
+                            h4(style='font-size: 25px; margin-bottom:0')
+                                | 장&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp르 &nbsp:&nbsp&nbsp
+                        |           
+                        td
+                            =genre
+                    |         
+                    tr
+                        td(style='text-align: right;')
+                            h4(style='font-size: 25px; margin-bottom:0')
+                                | 국&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp가 &nbsp:&nbsp&nbsp
+                        |           
+                        td
+                            =nation
+                    |         
+                    tr
+                        td(style='text-align: right;')
+                            h4(style='font-size: 25px; margin-bottom:0')
+                                | 상영&nbsp시간 &nbsp:&nbsp&nbsp
+                        |           
+                        td
+                            =showTm
+                    |         
+                    tr
+                        td(style='text-align: right;')
+                            h4(style='font-size: 25px; margin-bottom:0')
+                                | 등&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp급 &nbsp:&nbsp&nbsp
+                        |           
+                        td
+                            =watchGrade
+                //
+                    <div class="col-lg-6" style="width: 100%">
+                    </div>
+            // Our Customers
+            h2(style='font-size: 50px; font-family: 휴먼모음T; text-align: center')
+                br
+                | 동영상
+            |     
+            .video(style='max-width: 100%; max-height: 100%;')
+                iframe(title='예고편', width='100%', height='600', src=videoLink, allowfullscreen='', frameborder='0', scrolling='no', allow='autoplay')
+            
+            h2(style='font-size: 50px; font-family: 휴먼모음T; text-align: center')
+                br 
+            h2(style='font-size: 50px; font-family: 휴먼모음T; text-align: center')
+                br
+                | 시기별 관객수 예측 
+            img(src='/graph/'+predictionGraph, align='center' ,style='align:center;margin-left:auto;margin-right:auto;display:block',width='100%', height='100%')
+            h2(style='font-size: 16px; font-family: 휴먼모음T; text-align: right')
+                |* Regressor를 이용한 주차별 최종관객수 예측 값
+            br
+            br
+            br
+        // /.container
+        // Footer
+        footer.py-5.bg-dark
+            .container
+                p.m-0.text-center.text-white Copyright © mobisys 2018
+            // /.container
+        // Bootstrap core JavaScript
+        script(src='vendor/jquery/jquery.min.js')
+        |   
+        script(src='vendor/bootstrap/js/bootstrap.bundle.min.js')
+        |   
+        script(src='vender/bootstrap/js/usefulfun.js')

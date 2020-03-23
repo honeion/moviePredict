@@ -1,0 +1,86 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title 덕후의 예감 - 영화흥행예측
+    // Bootstrap core CSS
+    link(href='vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='css/modern-business.css', rel='stylesheet')
+  body
+    // Navigation
+    nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+      .container
+        a.navbar-brand(href='home') 영화흥행예측
+        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href='about') About
+            li.nav-item
+              a.nav-link.active(href='newest') Newest
+            li.nav-item
+              a.nav-link(href='prediction') Prediction
+            
+    // Page Content
+    .container
+        // Page Heading/Breadcrumbs
+        h1.mt-4.mb-3
+        h1.mt-4.mb-3(style='font-size: 50px; font-family: 문체부 훈민정음체') 최신영화 예측
+        ol.breadcrumb
+            li.breadcrumb-item.active
+
+        -for(var i=0; i<database.length; i++){
+        -var movieInfo = [database[i].movieCd, database[i].story, database[i].poster, database[i].video, database[i].movieNm, database[i].director, database[i].actor1, database[i].actor2, database[i].actor3, database[i].repNationNm, database[i].repGenreNm, database[i].showTm, database[i].watchGradeNm, database[i].openDt, database[i].prediction, database[i].realValue, database[i].accuracy, database[i].predictionGraph, database[i].D0_prediction];
+        .card.mb-4
+            .card-body
+                .row
+                    .col-lg-3(style='align-self: center; text-align: center')
+                        a(href='javascript: submitForm(#{i})')
+                            img.img-fluid.rounded(src=database[i].poster, alt='')
+                        form(action='/gotoMovieInfo', method='post', id=i)
+                            input(type='hidden', name='clickedMovie', value=movieInfo)
+                        script.
+                            function submitForm(j) {
+                            document.getElementById(j).submit();
+                            }
+                    .col-lg-8
+                        h1.card-title=database[i].movieNm
+                        p.card-text
+                            | 감독 : 
+                            =database[i].director
+                            br
+                            | 배우 : 
+                            -var actor=''
+                            -if(database[i].actor1 != ' ')
+                                -actor += database[i].actor1
+                            -if(database[i].actor2 != ' ')
+                                -actor += ', '+database[i].actor2
+                            -if(database[i].actor3 != ' ')
+                                -actor += ', '+database[i].actor3
+                            =actor
+                            br
+                            | 개봉일 : 
+                            =database[i].openDt
+                            br
+                            | 상영시간 : 
+                            =database[i].showTm
+                            br
+                            | 등급 : 
+                            =database[i].watchGradeNm
+                        a.btn.btn-primary(href='javascript: submitForm(#{i})') Read More →
+        -}
+      
+    // /.container
+    // Footer
+    footer.py-5.bg-dark
+      .container
+        p.m-0.text-center.text-white Copyright © mobisys 2018
+      // /.container
+    // Bootstrap core JavaScript
+    script(src='vendor/jquery/jquery.min.js')
+    script(src='vendor/bootstrap/js/bootstrap.bundle.min.js')

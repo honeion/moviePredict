@@ -1,0 +1,1758 @@
+D:\Anaconda3\python.exe D:/workspace_python/movie/RandomForestTuning.py
+현재 사용하는 파라미터들
+{'bootstrap': True,
+ 'criterion': 'mse',
+ 'max_depth': None,
+ 'max_features': 'auto',
+ 'max_leaf_nodes': None,
+ 'min_impurity_decrease': 0.0,
+ 'min_impurity_split': None,
+ 'min_samples_leaf': 1,
+ 'min_samples_split': 2,
+ 'min_weight_fraction_leaf': 0.0,
+ 'n_estimators': 10,
+ 'n_jobs': 1,
+ 'oob_score': False,
+ 'random_state': 42,
+ 'verbose': 0,
+ 'warm_start': False}
+Target 제외 DataSet Shape: (1800, 98)
+훈련 데이터셋 Shape: (1440, 97)
+훈련 타겟 Shape: (1440,)
+테스트 데이터셋 Shape: (360, 97)
+테스트 타겟 Shape: (360,)
+-------------------------------------------------- 
+ Default - 전체 97개 변수 사용
+	Mean Absolute Error : 107370.52
+	Mean Squared Error : 74795563209.92
+	테스트 셋 예측 정확도 : 89.62 %.
+--------------------------------------------------
+-------------------------------------------------- 
+ Default - 랜덤포레스트에서 찾은 중요 변수 38개
+	Mean Absolute Error : 109154.16
+	Mean Squared Error : 82755689848.04
+	테스트 셋 예측 정확도 : 89.9 %.
+--------------------------------------------------
+-------------------------------------------------- 
+ Default - OLS에서 찾은 중요 변수 38개
+	Mean Absolute Error : 126287.47
+	Mean Squared Error : 114626470072.63
+	테스트 셋 예측 정확도 : 89.01 %.
+--------------------------------------------------
+	Mean Absolute Error : 107370.52
+	Mean Squared Error : 74795563209.92
+	테스트 셋 예측 정확도 : 89.62 %.
+{'bootstrap': [True, False],
+ 'max_depth': [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 120, 150, None],
+ 'max_features': ['auto', 'sqrt'],
+ 'min_samples_leaf': [1, 2, 3, 4],
+ 'min_samples_split': [2, 3, 5, 7, 11, 13, 17, 19],
+ 'n_estimators': [10, 50, 100, 200, 300, 400, 500, 1000, 1500, 2000, 3000]}
+Fitting 5 folds for each of 100 candidates, totalling 500 fits
+[CV] n_estimators=3000, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False 
+[CV] n_estimators=3000, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False 
+[CV] n_estimators=3000, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False 
+[CV] n_estimators=3000, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False, score=-222588800425.3647, total= 7.2min
+[CV] n_estimators=3000, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False, score=-314287832787.43445, total= 7.4min
+[CV] n_estimators=100, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=20, bootstrap=True, score=-47742460143.90603, total=   8.3s
+[CV] n_estimators=100, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=20, bootstrap=True, score=-205963858782.03574, total=   8.1s
+[CV] n_estimators=100, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False, score=-254908379197.8379, total= 7.7min
+[CV] n_estimators=100, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False, score=-179463058037.46005, total= 7.8min
+[CV] n_estimators=100, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=20, bootstrap=True, score=-252001313983.14508, total=   8.2s
+[CV] n_estimators=10, min_samples_split=5, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=True 
+[CV]  n_estimators=10, min_samples_split=5, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=True, score=-77999357572.96005, total=   0.0s
+[CV] n_estimators=10, min_samples_split=5, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=True 
+[CV]  n_estimators=10, min_samples_split=5, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=True, score=-280852172660.1609, total=   0.0s
+[CV] n_estimators=10, min_samples_split=5, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=True 
+[CV]  n_estimators=10, min_samples_split=5, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=True, score=-202028317289.61078, total=   0.0s
+[CV] n_estimators=10, min_samples_split=5, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=True 
+[CV]  n_estimators=10, min_samples_split=5, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=True, score=-141024934738.2346, total=   0.0s
+[CV] n_estimators=10, min_samples_split=5, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=True 
+[CV]  n_estimators=10, min_samples_split=5, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=True, score=-120520800197.64708, total=   0.0s
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=False 
+[CV]  n_estimators=100, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=20, bootstrap=True, score=-83058571295.30731, total=   8.1s
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=False 
+[CV]  n_estimators=100, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=20, bootstrap=True, score=-85263514901.58873, total=   8.2s
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=False, score=-230071194763.2509, total=  15.5s
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=False, score=-55820559680.16906, total=  15.6s
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=False, score=-243426924380.58044, total=  15.4s
+[CV] n_estimators=2000, min_samples_split=3, min_samples_leaf=1, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=False, score=-76690110075.78993, total=  15.4s
+[CV] n_estimators=2000, min_samples_split=3, min_samples_leaf=1, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=False, score=-83658765650.62389, total=  15.7s
+[CV] n_estimators=2000, min_samples_split=3, min_samples_leaf=1, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False, score=-134449804171.19894, total= 7.3min
+[CV] n_estimators=2000, min_samples_split=3, min_samples_leaf=1, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=3, min_samples_leaf=1, max_features=auto, max_depth=40, bootstrap=False, score=-149458349306.33398, total= 6.4min
+[CV] n_estimators=2000, min_samples_split=3, min_samples_leaf=1, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=3, min_samples_leaf=1, max_features=auto, max_depth=40, bootstrap=False, score=-266994131312.69043, total= 6.2min
+[CV] n_estimators=500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True, score=-49562712121.37133, total=   5.4s
+[CV] n_estimators=500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True 
+[Parallel(n_jobs=-1)]: Done  24 tasks      | elapsed: 14.9min
+[CV]  n_estimators=2000, min_samples_split=3, min_samples_leaf=1, max_features=auto, max_depth=40, bootstrap=False, score=-243216289207.9365, total= 6.4min
+[CV] n_estimators=500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True, score=-285289796051.19305, total=   5.4s
+[CV] n_estimators=500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True, score=-238302002588.93323, total=   5.5s
+[CV] n_estimators=500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True, score=-85515386073.88078, total=   5.4s
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=4, max_features=sqrt, max_depth=120, bootstrap=False 
+[CV]  n_estimators=500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True, score=-75816456036.17557, total=   5.5s
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=4, max_features=sqrt, max_depth=120, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=4, max_features=sqrt, max_depth=120, bootstrap=False, score=-44625006093.30544, total=  34.3s
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=4, max_features=sqrt, max_depth=120, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=4, max_features=sqrt, max_depth=120, bootstrap=False, score=-212443503382.4901, total=  34.0s
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=4, max_features=sqrt, max_depth=120, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=4, max_features=sqrt, max_depth=120, bootstrap=False, score=-194144139346.29233, total=  34.0s
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=4, max_features=sqrt, max_depth=120, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=4, max_features=sqrt, max_depth=120, bootstrap=False, score=-66554268665.745575, total=  33.9s
+[CV] n_estimators=300, min_samples_split=5, min_samples_leaf=3, max_features=auto, max_depth=70, bootstrap=True 
+[CV]  n_estimators=300, min_samples_split=5, min_samples_leaf=3, max_features=auto, max_depth=70, bootstrap=True, score=-36075714227.87266, total=  27.6s
+[CV] n_estimators=300, min_samples_split=5, min_samples_leaf=3, max_features=auto, max_depth=70, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=4, max_features=sqrt, max_depth=120, bootstrap=False, score=-61111098683.36365, total=  34.5s
+[CV] n_estimators=300, min_samples_split=5, min_samples_leaf=3, max_features=auto, max_depth=70, bootstrap=True 
+[CV]  n_estimators=300, min_samples_split=5, min_samples_leaf=3, max_features=auto, max_depth=70, bootstrap=True, score=-187098468750.29922, total=  27.2s
+[CV] n_estimators=300, min_samples_split=5, min_samples_leaf=3, max_features=auto, max_depth=70, bootstrap=True 
+[CV]  n_estimators=300, min_samples_split=5, min_samples_leaf=3, max_features=auto, max_depth=70, bootstrap=True, score=-212356134226.05173, total=  27.4s
+[CV] n_estimators=300, min_samples_split=5, min_samples_leaf=3, max_features=auto, max_depth=70, bootstrap=True 
+[CV]  n_estimators=300, min_samples_split=5, min_samples_leaf=3, max_features=auto, max_depth=70, bootstrap=True, score=-64864101283.12723, total=  27.2s
+[CV] n_estimators=100, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=5, min_samples_leaf=3, max_features=auto, max_depth=70, bootstrap=True, score=-71285476852.40503, total=  27.4s
+[CV] n_estimators=100, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=False 
+[CV]  n_estimators=100, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=False, score=-287068816616.3029, total=  14.1s
+[CV] n_estimators=100, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=False 
+[CV]  n_estimators=100, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=False, score=-272664720447.36215, total=  13.0s
+[CV] n_estimators=100, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=False 
+[CV]  n_estimators=100, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=False, score=-331647823276.2698, total=  14.2s
+[CV] n_estimators=100, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=False 
+[CV]  n_estimators=100, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=False, score=-326065599043.2316, total=  13.5s
+[CV] n_estimators=10, min_samples_split=3, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=10, min_samples_split=3, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False, score=-156396680025.72986, total=   1.7s
+[CV] n_estimators=10, min_samples_split=3, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=10, min_samples_split=3, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False, score=-292455699659.0903, total=   1.6s
+[CV] n_estimators=10, min_samples_split=3, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=10, min_samples_split=3, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False, score=-269647150108.25256, total=   1.7s
+[CV] n_estimators=10, min_samples_split=3, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=10, min_samples_split=3, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False, score=-313093591827.40356, total=   1.7s
+[CV] n_estimators=10, min_samples_split=3, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=10, min_samples_split=3, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False, score=-108716836750.74728, total=   1.6s
+[CV] n_estimators=1000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=False 
+[CV]  n_estimators=100, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=False, score=-121410125284.80083, total=  13.3s
+[CV] n_estimators=1000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=False, score=-45562689826.588684, total=  18.2s
+[CV] n_estimators=1000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=False, score=-210014413895.00647, total=  18.0s
+[CV] n_estimators=1000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=False, score=-191273939293.67313, total=  18.1s
+[CV] n_estimators=1000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=False, score=-62214018015.04257, total=  18.0s
+[CV] n_estimators=500, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=150, bootstrap=True, score=-50545689038.19924, total=   5.6s
+[CV] n_estimators=500, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=150, bootstrap=True, score=-294165239219.8528, total=   5.3s
+[CV] n_estimators=500, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=False, score=-55710651963.89043, total=  18.4s
+[CV] n_estimators=500, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=150, bootstrap=True, score=-247125420543.39398, total=   5.4s
+[CV] n_estimators=500, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=150, bootstrap=True, score=-82637599067.17567, total=   5.3s
+[CV] n_estimators=100, min_samples_split=3, min_samples_leaf=4, max_features=auto, max_depth=30, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=150, bootstrap=True, score=-78473015436.1768, total=   5.4s
+[CV] n_estimators=100, min_samples_split=3, min_samples_leaf=4, max_features=auto, max_depth=30, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=3, min_samples_leaf=4, max_features=auto, max_depth=30, bootstrap=True, score=-34774668586.363365, total=   8.7s
+[CV] n_estimators=100, min_samples_split=3, min_samples_leaf=4, max_features=auto, max_depth=30, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=3, min_samples_leaf=4, max_features=auto, max_depth=30, bootstrap=True, score=-175822101675.92487, total=   8.5s
+[CV] n_estimators=100, min_samples_split=3, min_samples_leaf=4, max_features=auto, max_depth=30, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=3, min_samples_leaf=4, max_features=auto, max_depth=30, bootstrap=True, score=-209437793758.31982, total=   8.6s
+[CV] n_estimators=100, min_samples_split=3, min_samples_leaf=4, max_features=auto, max_depth=30, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=3, min_samples_leaf=4, max_features=auto, max_depth=30, bootstrap=True, score=-71397754906.53181, total=   8.4s
+[CV] n_estimators=3000, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=3, min_samples_leaf=4, max_features=auto, max_depth=30, bootstrap=True, score=-79899676913.52837, total=   8.6s
+[CV] n_estimators=3000, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=3, min_samples_leaf=1, max_features=auto, max_depth=40, bootstrap=False, score=-101175550374.3427, total= 6.1min
+[CV] n_estimators=3000, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=3, min_samples_leaf=1, max_features=auto, max_depth=40, bootstrap=False, score=-320772849157.1534, total= 6.3min
+[CV] n_estimators=3000, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=20, bootstrap=True, score=-41028841776.67451, total= 4.5min
+[CV] n_estimators=3000, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=20, bootstrap=True, score=-178143142287.50797, total= 4.4min
+[CV] n_estimators=100, min_samples_split=13, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=13, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True, score=-41646410515.747284, total=   8.2s
+[CV] n_estimators=100, min_samples_split=13, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=13, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True, score=-187552021624.62338, total=   8.0s
+[CV] n_estimators=100, min_samples_split=13, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=13, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True, score=-235428484623.19556, total=   8.2s
+[CV] n_estimators=100, min_samples_split=13, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=13, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True, score=-72075781834.0552, total=   8.0s
+[CV] n_estimators=100, min_samples_split=13, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=13, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True, score=-84220976633.62712, total=   8.1s
+[CV] n_estimators=2000, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=20, bootstrap=True, score=-239049938306.23334, total= 4.4min
+[CV] n_estimators=2000, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=True, score=-45672611811.929436, total=  26.1s
+[CV] n_estimators=2000, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=20, bootstrap=True, score=-71833463605.90733, total= 4.4min
+[CV] n_estimators=2000, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=True, score=-258872857774.72098, total=  25.9s
+[CV] n_estimators=2000, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=True, score=-210230150841.96115, total=  25.7s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=True, score=-73984596010.93282, total=  25.7s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True, score=-35745070273.18813, total=   9.5s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True, score=-183624212235.65588, total=   9.3s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True, score=-213998102203.05936, total=   9.3s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True, score=-68566412921.01428, total=   9.3s
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=True, score=-54114601530.291954, total=  26.1s
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True, score=-66358602260.238686, total=   9.3s
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True, score=-50179560154.636734, total= 1.4min
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True, score=-233770101894.8979, total= 1.4min
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True, score=-275352747720.761, total= 1.4min
+[CV] n_estimators=50, min_samples_split=13, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=13, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=False, score=-50222905970.98808, total=   0.7s
+[CV] n_estimators=50, min_samples_split=13, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=13, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=False, score=-211067903862.66852, total=   0.7s
+[CV] n_estimators=50, min_samples_split=13, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=13, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=False, score=-218956122411.80533, total=   0.7s
+[CV] n_estimators=50, min_samples_split=13, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=13, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=False, score=-72271099500.43373, total=   0.7s
+[CV] n_estimators=50, min_samples_split=13, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=13, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=False, score=-77955527633.78592, total=   0.7s
+[CV] n_estimators=400, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True, score=-41846134868.461464, total=  35.4s
+[CV] n_estimators=400, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=20, bootstrap=True, score=-79786226327.37791, total= 4.4min
+[CV] n_estimators=400, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True, score=-185487110341.15002, total=  34.7s
+[CV] n_estimators=400, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True, score=-87976797305.73396, total= 1.4min
+[CV] n_estimators=400, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True, score=-84180091559.53387, total= 1.4min
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True, score=-239194933540.26193, total=  35.0s
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True, score=-72389217977.01689, total=  35.2s
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=13, min_samples_leaf=1, max_features=auto, max_depth=100, bootstrap=True, score=-80335099471.23383, total=  36.1s
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=None, bootstrap=True, score=-35351151643.95707, total= 3.1min
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=None, bootstrap=True, score=-174749384104.5286, total= 3.0min
+[CV] n_estimators=1500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=1500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=True, score=-47886235180.28892, total=  16.5s
+[CV] n_estimators=1500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=None, bootstrap=True, score=-216889989393.01276, total= 3.0min
+[CV] n_estimators=1500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=None, bootstrap=True, score=-72993273538.92035, total= 3.0min
+[CV] n_estimators=1500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=1500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=True, score=-285739130120.73425, total=  16.5s
+[CV] n_estimators=1500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=1500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=True, score=-234360921828.83258, total=  16.4s
+[CV] n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=10, bootstrap=True 
+[CV]  n_estimators=1500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=True, score=-85334291534.18347, total=  16.4s
+[CV] n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=10, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=10, bootstrap=True, score=-36541618855.45651, total=   8.1s
+[CV] n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=10, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=10, bootstrap=True, score=-178816079986.78864, total=   8.0s
+[CV] n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=10, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=10, bootstrap=True, score=-203734487633.2504, total=   8.1s
+[CV] n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=10, bootstrap=True 
+[CV]  n_estimators=1500, min_samples_split=3, min_samples_leaf=4, max_features=sqrt, max_depth=40, bootstrap=True, score=-75982654826.19368, total=  16.5s
+[CV] n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=10, bootstrap=True, score=-64813855936.98607, total=   8.1s
+[CV] n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=10, bootstrap=True, score=-71468119797.76035, total=   8.0s
+[CV] n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=True, score=-36735680626.97838, total=   9.2s
+[CV] n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=True, score=-187364745562.9624, total=   9.0s
+[CV] n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=True, score=-209139275986.1008, total=   9.1s
+[CV] n_estimators=1000, min_samples_split=11, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=True, score=-65895119389.279976, total=   9.0s
+[CV] n_estimators=1000, min_samples_split=11, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=3, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=True, score=-74260894336.1112, total=   9.1s
+[CV] n_estimators=1000, min_samples_split=11, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=True 
+[Parallel(n_jobs=-1)]: Done 120 tasks      | elapsed: 33.5min
+[CV]  n_estimators=1000, min_samples_split=11, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=True, score=-49094227802.83549, total=  11.2s
+[CV] n_estimators=1000, min_samples_split=11, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=11, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=True, score=-281083331545.49347, total=  11.1s
+[CV] n_estimators=1000, min_samples_split=11, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=11, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=True, score=-236551574646.8828, total=  11.2s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=3, max_features=sqrt, max_depth=20, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=3, max_features=sqrt, max_depth=20, bootstrap=True, score=-49642806758.55153, total=   1.1s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=3, max_features=sqrt, max_depth=20, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=3, max_features=sqrt, max_depth=20, bootstrap=True, score=-299209551386.9788, total=   1.0s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=3, max_features=sqrt, max_depth=20, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=3, max_features=sqrt, max_depth=20, bootstrap=True, score=-224432356397.00253, total=   1.0s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=3, max_features=sqrt, max_depth=20, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=3, max_features=sqrt, max_depth=20, bootstrap=True, score=-89452226788.698, total=   1.1s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=3, max_features=sqrt, max_depth=20, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=3, max_features=sqrt, max_depth=20, bootstrap=True, score=-80544948492.75475, total=   1.0s
+[CV] n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=11, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=True, score=-81606832856.21747, total=  11.1s
+[CV] n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=11, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=True, score=-78291427419.91316, total=  11.2s
+[CV] n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=False, score=-233681928892.80365, total=  41.8s
+[CV] n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=False, score=-211797488398.39767, total=  45.5s
+[CV] n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=False, score=-259839183331.21722, total=  45.2s
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=None, bootstrap=True, score=-72100061909.34187, total= 3.0min
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=False, score=-315604270298.33295, total=  43.0s
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=False, score=-122647625280.1174, total=  42.8s
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False, score=-146132409003.11734, total= 5.7min
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False, score=-304301076287.9876, total= 5.2min
+[CV] n_estimators=200, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True, score=-37576389864.98016, total=  19.4s
+[CV] n_estimators=200, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False, score=-267756763048.18423, total= 5.6min
+[CV] n_estimators=200, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False, score=-317049301845.35345, total= 5.6min
+[CV] n_estimators=200, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True, score=-193935136912.3093, total=  19.1s
+[CV] n_estimators=200, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True, score=-220623362098.4452, total=  19.2s
+[CV] n_estimators=1000, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True, score=-68885659830.60938, total=  19.2s
+[CV] n_estimators=1000, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True, score=-62908023991.17669, total=  19.4s
+[CV] n_estimators=1000, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True, score=-45126166761.39096, total=  13.9s
+[CV] n_estimators=1000, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True, score=-261524821142.05893, total=  13.8s
+[CV] n_estimators=1000, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True, score=-206906955061.86755, total=  13.8s
+[CV] n_estimators=400, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=None, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True, score=-75490201499.95619, total=  13.8s
+[CV] n_estimators=400, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=None, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True, score=-52204158464.49549, total=  13.9s
+[CV] n_estimators=400, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=None, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=None, bootstrap=True, score=-45110114048.28364, total=   4.9s
+[CV] n_estimators=400, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=None, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=None, bootstrap=True, score=-278493712159.99646, total=   4.9s
+[CV] n_estimators=400, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=None, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=None, bootstrap=True, score=-212738372664.5364, total=   4.9s
+[CV] n_estimators=300, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=None, bootstrap=True, score=-73273593165.90608, total=   4.8s
+[CV] n_estimators=300, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=None, bootstrap=True, score=-58908725326.21232, total=   4.9s
+[CV] n_estimators=300, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=False, score=-59107757511.220184, total=   5.1s
+[CV] n_estimators=300, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=False, score=-210471164000.3365, total=   5.0s
+[CV] n_estimators=300, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=False, score=-232655565069.42004, total=   5.0s
+[CV] n_estimators=50, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=30, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=False, score=-70871193560.15604, total=   5.0s
+[CV] n_estimators=50, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=30, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=80, bootstrap=False, score=-76735243544.5193, total=   5.1s
+[CV] n_estimators=50, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=30, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=30, bootstrap=False, score=-288565148576.5297, total=   7.5s
+[CV] n_estimators=50, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=30, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=30, bootstrap=False, score=-266637423803.19662, total=   7.4s
+[CV] n_estimators=50, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=30, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=30, bootstrap=False, score=-282237612856.6165, total=   7.5s
+[CV] n_estimators=200, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=50, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=30, bootstrap=False, score=-316807020147.6208, total=   7.5s
+[CV] n_estimators=200, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=50, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=30, bootstrap=False, score=-125522758180.82921, total=   7.1s
+[CV] n_estimators=200, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=True, score=-50424128927.37884, total=  15.7s
+[CV] n_estimators=200, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=True, score=-241380122741.40018, total=  15.3s
+[CV] n_estimators=200, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=True, score=-277538241874.15875, total=  15.7s
+[CV] n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=20, bootstrap=False 
+[CV]  n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=20, bootstrap=False, score=-58462496124.42514, total=   7.8s
+[CV] n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=20, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=True, score=-85858220598.93707, total=  15.5s
+[CV] n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=20, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=None, bootstrap=True, score=-88896588079.29611, total=  15.7s
+[CV] n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=20, bootstrap=False 
+[CV]  n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=20, bootstrap=False, score=-243889409969.4322, total=   7.8s
+[CV] n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=20, bootstrap=False 
+[CV]  n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=20, bootstrap=False, score=-245323366835.5453, total=   7.8s
+[CV] n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False, score=-52167077047.55051, total=   0.8s
+[CV] n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False, score=-207520864428.5761, total=   0.8s
+[CV] n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False, score=-203990067995.45334, total=   0.8s
+[CV] n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False, score=-61409184154.94142, total=   0.8s
+[CV] n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False, score=-48922719785.26747, total=   0.9s
+[CV] n_estimators=1000, min_samples_split=17, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=20, bootstrap=False, score=-78102859203.87242, total=   7.9s
+[CV] n_estimators=1000, min_samples_split=17, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=20, bootstrap=False, score=-85981718623.13873, total=   8.1s
+[CV] n_estimators=1000, min_samples_split=17, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=17, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True, score=-57654141707.845116, total=  10.3s
+[CV] n_estimators=1000, min_samples_split=17, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=17, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True, score=-322794764915.3493, total=  10.2s
+[CV] n_estimators=1000, min_samples_split=17, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=17, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True, score=-279733545724.99146, total=  10.3s
+[CV] n_estimators=200, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False, score=-47938635383.565575, total=   3.9s
+[CV] n_estimators=200, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=17, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True, score=-103173298035.44646, total=  10.1s
+[CV] n_estimators=200, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=17, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True, score=-95876921509.63142, total=  10.2s
+[CV] n_estimators=200, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False, score=-217491865709.82825, total=   4.0s
+[CV] n_estimators=200, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False, score=-189899473105.58228, total=   3.9s
+[CV] n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False, score=-62261931052.87443, total=   3.9s
+[CV] n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=5, min_samples_leaf=1, max_features=sqrt, max_depth=20, bootstrap=False, score=-46956419009.3555, total=   3.9s
+[CV] n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=False, score=-212745729993.6945, total=   7.8s
+[CV] n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=False, score=-42892827657.79056, total=   8.0s
+[CV] n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=False, score=-183879780717.3821, total=   7.8s
+[CV] n_estimators=400, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True, score=-50978149322.15788, total=   4.4s
+[CV] n_estimators=400, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=False, score=-66603905456.605194, total=   7.8s
+[CV] n_estimators=400, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=30, bootstrap=False, score=-50906646864.23929, total=   7.9s
+[CV] n_estimators=400, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True, score=-299907838974.6535, total=   4.3s
+[CV] n_estimators=400, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True, score=-248540044856.97308, total=   4.3s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True, score=-87688150333.55167, total=   4.3s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True, score=-85209929167.88419, total=   4.4s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False, score=-222545571356.9997, total=  14.3s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False, score=-179532198364.0745, total=  15.5s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False, score=-254432539566.51627, total=  15.4s
+[CV] n_estimators=3000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=False 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False, score=-315276431087.511, total=  14.8s
+[CV] n_estimators=3000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=False 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=4, max_features=auto, max_depth=100, bootstrap=False, score=-134662210103.71701, total=  14.7s
+[CV] n_estimators=3000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=40, bootstrap=False, score=-103094410968.9579, total= 5.3min
+[CV] n_estimators=3000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=False, score=-271793482696.42056, total= 6.6min
+[CV] n_estimators=3000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=False, score=-286510756264.203, total= 7.3min
+[CV] n_estimators=1000, min_samples_split=13, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=False, score=-330575191255.64764, total= 7.3min
+[CV] n_estimators=1000, min_samples_split=13, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=False, score=-318883991212.01843, total= 7.0min
+[CV] n_estimators=1000, min_samples_split=13, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=13, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False, score=-293582144147.4812, total= 2.3min
+[CV] n_estimators=1000, min_samples_split=13, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=13, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False, score=-221908978387.70193, total= 2.6min
+[CV] n_estimators=1000, min_samples_split=13, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=13, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False, score=-285559881814.7476, total= 2.5min
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=True, score=-45738153950.924644, total=  23.8s
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=True, score=-264561180813.32922, total=  23.5s
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=13, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False, score=-363789023602.3149, total= 2.4min
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=13, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False, score=-122579001073.03, total= 2.4min
+[CV] n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=True, score=-217572817680.93088, total=  23.6s
+[CV] n_estimators=3000, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=True, score=-77473967435.56085, total=  23.6s
+[CV] n_estimators=3000, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=True, score=-66129556068.578354, total=  23.9s
+[CV] n_estimators=3000, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=False, score=-44342858544.43027, total=  59.5s
+[CV] n_estimators=3000, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=False, score=-216092475494.4449, total=  59.0s
+[CV] n_estimators=3000, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=False, score=-120653487663.21451, total= 6.9min
+[CV] n_estimators=500, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=50, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=False, score=-181608931542.49863, total=  58.8s
+[CV] n_estimators=500, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=50, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=50, bootstrap=True, score=-47420204702.60212, total=  40.1s
+[CV] n_estimators=500, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=50, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=50, bootstrap=True, score=-216704610464.38922, total=  39.1s
+[CV] n_estimators=500, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=50, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=False, score=-63634746996.48593, total=  59.0s
+[CV] n_estimators=500, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=50, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=80, bootstrap=False, score=-52775933218.95973, total=  59.9s
+[CV] n_estimators=50, min_samples_split=2, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=True 
+[CV]  n_estimators=50, min_samples_split=2, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=True, score=-40259497655.32762, total=   4.6s
+[CV] n_estimators=50, min_samples_split=2, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=True 
+[CV]  n_estimators=50, min_samples_split=2, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=True, score=-176766380427.6681, total=   4.5s
+[CV] n_estimators=50, min_samples_split=2, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=True 
+[CV]  n_estimators=50, min_samples_split=2, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=True, score=-208306598894.4151, total=   4.5s
+[CV] n_estimators=50, min_samples_split=2, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=True 
+[CV]  n_estimators=50, min_samples_split=2, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=True, score=-58220574346.82197, total=   4.4s
+[CV] n_estimators=50, min_samples_split=2, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=50, bootstrap=True, score=-261075468902.28433, total=  40.1s
+[CV] n_estimators=400, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=50, bootstrap=True, score=-85352091337.99355, total=  39.6s
+[CV] n_estimators=400, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True 
+[CV]  n_estimators=50, min_samples_split=2, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=True, score=-73680238862.4012, total=   4.5s
+[CV] n_estimators=400, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True, score=-59783210576.50076, total=   4.3s
+[CV] n_estimators=400, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True, score=-323420410365.9664, total=   4.3s
+[CV] n_estimators=400, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True, score=-277018356093.8157, total=   4.2s
+[CV] n_estimators=2000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True, score=-101566382733.081, total=   4.3s
+[CV] n_estimators=2000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=17, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=True, score=-94458951808.99718, total=   4.3s
+[CV] n_estimators=2000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=50, bootstrap=True, score=-86687207735.49202, total=  39.9s
+[CV] n_estimators=2000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True, score=-175427867355.7774, total= 2.8min
+[CV] n_estimators=2000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True, score=-72710407945.98415, total= 2.8min
+[CV] n_estimators=300, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=40, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True, score=-38861713815.33349, total= 2.8min
+[CV] n_estimators=300, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=40, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True, score=-234227290817.02618, total= 2.8min
+[CV] n_estimators=300, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=40, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=40, bootstrap=False, score=-47058259419.553795, total=   5.8s
+[CV] n_estimators=300, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=40, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=40, bootstrap=False, score=-209214286053.7375, total=   5.8s
+[CV] n_estimators=300, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=40, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=40, bootstrap=False, score=-194325336565.95435, total=   5.7s
+[CV] n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=40, bootstrap=False, score=-59285975976.29533, total=   5.7s
+[CV] n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=40, bootstrap=False, score=-52753016734.47061, total=   5.9s
+[CV] n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=False, score=-288342123413.1737, total=  29.5s
+[CV] n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=False, score=-271718700530.24295, total=  26.9s
+[CV] n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=False, score=-284066305707.96454, total=  29.4s
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=False, score=-319066894745.816, total=  28.2s
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=30, bootstrap=False, score=-124803533527.47542, total=  27.8s
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True, score=-78553548928.11467, total= 2.8min
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=False 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=False, score=-144228421455.97006, total= 4.4min
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=False 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=False, score=-275550366354.2246, total= 4.2min
+[CV] n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=False, score=-260802682813.94092, total= 4.3min
+[CV] n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True, score=-48003598009.36429, total=  16.4s
+[CV] n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True, score=-211209290263.53754, total=  15.9s
+[CV] n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True, score=-259296943712.05484, total=  16.1s
+[CV] n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True, score=-81379281475.8432, total=  16.0s
+[CV] n_estimators=50, min_samples_split=3, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=3, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False, score=-61031371275.08432, total=   0.7s
+[CV] n_estimators=50, min_samples_split=3, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=3, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False, score=-227334428826.0616, total=   0.7s
+[CV] n_estimators=50, min_samples_split=3, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=3, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False, score=-183782112437.12048, total=   0.7s
+[CV] n_estimators=50, min_samples_split=3, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=3, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False, score=-53429617465.485756, total=   0.7s
+[CV] n_estimators=50, min_samples_split=3, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=3, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False, score=-57535955820.05694, total=   0.7s
+[CV] n_estimators=3000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=60, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=17, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True, score=-88497169596.13135, total=  16.3s
+[CV] n_estimators=3000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=60, bootstrap=False 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=False, score=-361361821830.7077, total= 4.2min
+[CV] n_estimators=3000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=60, bootstrap=False 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=False, score=-110660903171.83908, total= 4.1min
+[CV] n_estimators=3000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=60, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=60, bootstrap=False, score=-233653881164.38782, total= 7.0min
+[CV] n_estimators=3000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=60, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=60, bootstrap=False, score=-211723790671.42935, total= 7.6min
+[CV] n_estimators=2000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=True, score=-47105383956.32485, total=  23.3s
+[CV] n_estimators=2000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=True, score=-279223085400.50793, total=  23.1s
+[CV] n_estimators=2000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=60, bootstrap=False, score=-260247668724.48666, total= 7.6min
+[CV] n_estimators=2000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=True, score=-217779954108.9636, total=  23.2s
+[CV] n_estimators=2000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=True, score=-77721652153.31696, total=  23.2s
+[CV] n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=90, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=2, min_samples_leaf=3, max_features=sqrt, max_depth=100, bootstrap=True, score=-69541653030.98885, total=  23.2s
+[CV] n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=90, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=60, bootstrap=False, score=-315611578459.6302, total= 7.2min
+[CV] n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=90, bootstrap=True 
+[Parallel(n_jobs=-1)]: Done 280 tasks      | elapsed: 81.6min
+[CV]  n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=90, bootstrap=True, score=-35303944213.46032, total= 4.9min
+[CV] n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=90, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=90, bootstrap=True, score=-177677289104.73557, total= 4.8min
+[CV] n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=90, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=60, bootstrap=False, score=-122617137736.78934, total= 7.2min
+[CV] n_estimators=1000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=90, bootstrap=True, score=-216441866839.15082, total= 4.8min
+[CV] n_estimators=1000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=True, score=-46987767508.370674, total= 1.3min
+[CV] n_estimators=1000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=True, score=-207119060722.74722, total= 1.3min
+[CV] n_estimators=1000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=True, score=-259468501295.15076, total= 1.3min
+[CV] n_estimators=1000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=True, score=-84473149687.8817, total= 1.3min
+[CV] n_estimators=1000, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=True, score=-83579993862.24529, total= 1.3min
+[CV] n_estimators=1000, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=90, bootstrap=True, score=-70801932398.05461, total= 4.8min
+[CV] n_estimators=1000, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=90, bootstrap=True, score=-57610679282.55291, total= 4.9min
+[CV] n_estimators=1000, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=True, score=-47538858743.81918, total= 1.4min
+[CV] n_estimators=1000, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=True, score=-206064723246.07245, total= 1.4min
+[CV] n_estimators=400, min_samples_split=5, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=5, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True, score=-37114059501.02386, total=  34.8s
+[CV] n_estimators=400, min_samples_split=5, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=True, score=-261344375531.03754, total= 1.4min
+[CV] n_estimators=400, min_samples_split=5, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=True, score=-83480748783.06743, total= 1.4min
+[CV] n_estimators=400, min_samples_split=5, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=17, min_samples_leaf=1, max_features=auto, max_depth=70, bootstrap=True, score=-83940064366.18774, total= 1.4min
+[CV] n_estimators=400, min_samples_split=5, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=5, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True, score=-179271847141.96396, total=  34.5s
+[CV] n_estimators=500, min_samples_split=2, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=5, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True, score=-218103258709.01633, total=  35.0s
+[CV] n_estimators=500, min_samples_split=2, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=5, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True, score=-74377833349.27263, total=  34.5s
+[CV] n_estimators=500, min_samples_split=2, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=5, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True, score=-77588314037.82272, total=  34.5s
+[CV] n_estimators=500, min_samples_split=2, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=500, min_samples_split=2, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=False, score=-222496542260.02686, total= 1.2min
+[CV] n_estimators=500, min_samples_split=2, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=False 
+[CV]  n_estimators=500, min_samples_split=2, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=False, score=-179513814398.9176, total= 1.3min
+[CV] n_estimators=500, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=120, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=120, bootstrap=True, score=-54579396439.96153, total=   5.3s
+[CV] n_estimators=500, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=120, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=120, bootstrap=True, score=-304017187754.9037, total=   5.2s
+[CV] n_estimators=500, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=120, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=2, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=False, score=-254611059626.78256, total= 1.3min
+[CV] n_estimators=500, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=120, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=120, bootstrap=True, score=-254556433891.34787, total=   5.4s
+[CV] n_estimators=500, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=120, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=120, bootstrap=True, score=-91536886343.37901, total=   5.3s
+[CV] n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=120, bootstrap=True, score=-77259808922.24506, total=   5.3s
+[CV] n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=2, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=False, score=-314837115166.4643, total= 1.2min
+[CV] n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True, score=-38747588414.97459, total=  25.2s
+[CV] n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True, score=-178202308484.07764, total=  24.6s
+[CV] n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True 
+[CV]  n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True, score=-231186252803.82562, total=  25.1s
+[CV] n_estimators=300, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True, score=-68321577051.94198, total=  24.7s
+[CV] n_estimators=300, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=2, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=False, score=-134582949885.91466, total= 1.2min
+[CV] n_estimators=300, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=300, min_samples_split=11, min_samples_leaf=4, max_features=auto, max_depth=20, bootstrap=True, score=-79821361008.64738, total=  24.9s
+[CV] n_estimators=300, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=300, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=None, bootstrap=True, score=-49972021554.00389, total=  24.8s
+[CV] n_estimators=300, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=300, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=None, bootstrap=True, score=-246970855024.91223, total=  24.3s
+[CV] n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=None, bootstrap=True, score=-268445384328.5071, total=  24.4s
+[CV] n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=False, score=-49650248813.75308, total=   4.3s
+[CV] n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=None, bootstrap=True, score=-80646401552.20807, total=  24.3s
+[CV] n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=False, score=-209505564038.9664, total=   4.3s
+[CV] n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=False 
+[CV]  n_estimators=300, min_samples_split=19, min_samples_leaf=1, max_features=auto, max_depth=None, bootstrap=True, score=-86455967649.75203, total=  24.7s
+[CV] n_estimators=500, min_samples_split=5, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=False, score=-187419187348.547, total=   4.2s
+[CV] n_estimators=500, min_samples_split=5, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=False, score=-61181054331.71181, total=   4.3s
+[CV] n_estimators=500, min_samples_split=5, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=False, score=-51172203286.00843, total=   4.3s
+[CV] n_estimators=500, min_samples_split=5, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=False 
+[CV]  n_estimators=500, min_samples_split=5, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=False, score=-298197727636.4979, total= 1.1min
+[CV] n_estimators=500, min_samples_split=5, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=False 
+[CV]  n_estimators=500, min_samples_split=5, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=False, score=-151639811151.32785, total= 1.1min
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False 
+[CV]  n_estimators=500, min_samples_split=5, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=False, score=-259562038038.3047, total= 1.2min
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False 
+[CV]  n_estimators=500, min_samples_split=5, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=False, score=-307795551973.4616, total= 1.1min
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False 
+[CV]  n_estimators=500, min_samples_split=5, min_samples_leaf=2, max_features=auto, max_depth=10, bootstrap=False, score=-102425471756.50102, total= 1.1min
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False, score=-268162716311.10526, total= 3.7min
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False, score=-264330466105.9657, total= 4.0min
+[CV] n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False, score=-169484063126.76727, total= 4.1min
+[CV] n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True, score=-58621871934.32617, total=   5.0s
+[CV] n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True, score=-353597401768.1356, total=   4.9s
+[CV] n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True, score=-298858944387.45123, total=   4.9s
+[CV] n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True, score=-114332710892.37538, total=   4.8s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=True, score=-103525737702.02313, total=   4.9s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=None, bootstrap=True, score=-35745070273.18813, total=   9.4s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=None, bootstrap=True, score=-183624212235.65588, total=   9.2s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=None, bootstrap=True, score=-213998102203.05936, total=   9.2s
+[CV] n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=None, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=None, bootstrap=True, score=-68566412921.01428, total=   9.2s
+[CV] n_estimators=200, min_samples_split=19, min_samples_leaf=2, max_features=auto, max_depth=120, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=None, bootstrap=True, score=-66358602260.238686, total=   9.3s
+[CV] n_estimators=200, min_samples_split=19, min_samples_leaf=2, max_features=auto, max_depth=120, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=19, min_samples_leaf=2, max_features=auto, max_depth=120, bootstrap=True, score=-50471667432.756546, total=  16.2s
+[CV] n_estimators=200, min_samples_split=19, min_samples_leaf=2, max_features=auto, max_depth=120, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=19, min_samples_leaf=2, max_features=auto, max_depth=120, bootstrap=True, score=-244281810678.5103, total=  15.9s
+[CV] n_estimators=200, min_samples_split=19, min_samples_leaf=2, max_features=auto, max_depth=120, bootstrap=True 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False, score=-315876742539.92706, total= 3.9min
+[CV] n_estimators=200, min_samples_split=19, min_samples_leaf=2, max_features=auto, max_depth=120, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=19, min_samples_leaf=2, max_features=auto, max_depth=120, bootstrap=True, score=-273999249426.21283, total=  16.0s
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=19, min_samples_leaf=2, max_features=auto, max_depth=120, bootstrap=True, score=-81383259682.15837, total=  15.9s
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=19, min_samples_leaf=2, max_features=auto, max_depth=120, bootstrap=True, score=-87690951974.13371, total=  16.1s
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True, score=-50218937537.522934, total= 1.3min
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True, score=-235654242202.23865, total= 1.3min
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True, score=-278239673435.8813, total= 1.3min
+[CV] n_estimators=200, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=120, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=120, bootstrap=False, score=-286527332228.4288, total=  29.0s
+[CV] n_estimators=200, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=120, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=120, bootstrap=False, score=-271793771333.7941, total=  26.4s
+[CV] n_estimators=200, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=120, bootstrap=False 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=3, max_features=auto, max_depth=50, bootstrap=False, score=-110367292379.97012, total= 3.8min
+[CV] n_estimators=200, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=120, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True, score=-88907406228.93591, total= 1.3min
+[CV] n_estimators=200, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=120, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True, score=-84969969475.10497, total= 1.3min
+[CV] n_estimators=100, min_samples_split=5, min_samples_leaf=1, max_features=auto, max_depth=120, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=120, bootstrap=False, score=-330626242516.7503, total=  28.8s
+[CV] n_estimators=100, min_samples_split=5, min_samples_leaf=1, max_features=auto, max_depth=120, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=120, bootstrap=False, score=-319100337617.85944, total=  27.8s
+[CV] n_estimators=100, min_samples_split=5, min_samples_leaf=1, max_features=auto, max_depth=120, bootstrap=False 
+[CV]  n_estimators=100, min_samples_split=5, min_samples_leaf=1, max_features=auto, max_depth=120, bootstrap=False, score=-147522302143.04163, total=  17.9s
+[CV] n_estimators=100, min_samples_split=5, min_samples_leaf=1, max_features=auto, max_depth=120, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=120, bootstrap=False, score=-120653049365.40851, total=  27.3s
+[CV] n_estimators=100, min_samples_split=5, min_samples_leaf=1, max_features=auto, max_depth=120, bootstrap=False 
+[CV]  n_estimators=100, min_samples_split=5, min_samples_leaf=1, max_features=auto, max_depth=120, bootstrap=False, score=-269015097675.73276, total=  17.3s
+[CV] n_estimators=2000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=5, min_samples_leaf=1, max_features=auto, max_depth=120, bootstrap=False, score=-249965484719.4714, total=  17.8s
+[CV] n_estimators=2000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=5, min_samples_leaf=1, max_features=auto, max_depth=120, bootstrap=False, score=-321562422272.9585, total=  17.6s
+[CV] n_estimators=2000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=5, min_samples_leaf=1, max_features=auto, max_depth=120, bootstrap=False, score=-110395689130.80927, total=  17.0s
+[CV] n_estimators=2000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True, score=-48750484622.716736, total= 2.7min
+[CV] n_estimators=2000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True, score=-230961772483.40305, total= 2.6min
+[CV] n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True, score=-43805470953.61354, total=   4.9s
+[CV] n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True, score=-274629059541.75412, total= 2.6min
+[CV] n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True, score=-261647162668.63998, total=   4.9s
+[CV] n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True, score=-84769935390.98898, total= 2.6min
+[CV] n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True, score=-208030250187.73627, total=   4.9s
+[CV] n_estimators=200, min_samples_split=2, min_samples_leaf=4, max_features=sqrt, max_depth=30, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=2, min_samples_leaf=4, max_features=sqrt, max_depth=30, bootstrap=True, score=-49601868334.77283, total=   2.1s
+[CV] n_estimators=200, min_samples_split=2, min_samples_leaf=4, max_features=sqrt, max_depth=30, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True, score=-72102637547.24284, total=   5.0s
+[CV] n_estimators=200, min_samples_split=2, min_samples_leaf=4, max_features=sqrt, max_depth=30, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=3, min_samples_leaf=2, max_features=sqrt, max_depth=40, bootstrap=True, score=-64171482892.66181, total=   4.9s
+[CV] n_estimators=200, min_samples_split=2, min_samples_leaf=4, max_features=sqrt, max_depth=30, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=2, min_samples_leaf=4, max_features=sqrt, max_depth=30, bootstrap=True, score=-267887656927.1864, total=   2.1s
+[CV] n_estimators=200, min_samples_split=2, min_samples_leaf=4, max_features=sqrt, max_depth=30, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=2, min_samples_leaf=4, max_features=sqrt, max_depth=30, bootstrap=True, score=-239613253385.26956, total=   2.1s
+[CV] n_estimators=10, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=2, min_samples_leaf=4, max_features=sqrt, max_depth=30, bootstrap=True, score=-86790227265.86922, total=   2.1s
+[CV] n_estimators=10, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=10, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=True, score=-88842259464.81912, total=   0.0s
+[CV] n_estimators=10, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=10, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=True, score=-386359662027.6306, total=   0.0s
+[CV] n_estimators=10, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=10, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=True, score=-312490886688.053, total=   0.0s
+[CV] n_estimators=10, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=True 
+[CV]  n_estimators=10, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=True, score=-107077379882.25232, total=   0.0s
+[CV] n_estimators=10, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=False 
+[CV]  n_estimators=10, min_samples_split=13, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=True, score=-100118552420.88724, total=   0.0s
+[CV] n_estimators=10, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=False 
+[CV]  n_estimators=10, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=False, score=-78078490447.87141, total=   0.1s
+[CV] n_estimators=10, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=False 
+[CV]  n_estimators=10, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=False, score=-215788074867.83923, total=   0.1s
+[CV] n_estimators=10, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=False 
+[CV]  n_estimators=10, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=False, score=-224861231224.62424, total=   0.1s
+[CV] n_estimators=10, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=False 
+[CV]  n_estimators=10, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=False, score=-60259624005.76937, total=   0.1s
+[CV] n_estimators=10, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=10, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=90, bootstrap=False, score=-94121868159.03076, total=   0.1s
+[CV] n_estimators=10, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=2, min_samples_leaf=4, max_features=sqrt, max_depth=30, bootstrap=True, score=-76172951525.38568, total=   2.1s
+[CV] n_estimators=10, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=10, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True, score=-63433066793.653076, total=   0.7s
+[CV] n_estimators=10, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=10, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True, score=-236582065785.12247, total=   0.7s
+[CV] n_estimators=10, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=10, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True, score=-266554271531.244, total=   0.7s
+[CV] n_estimators=300, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=100, bootstrap=True 
+[CV]  n_estimators=10, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True, score=-151691387209.13132, total=   0.7s
+[CV] n_estimators=300, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=100, bootstrap=True 
+[CV]  n_estimators=10, min_samples_split=17, min_samples_leaf=4, max_features=auto, max_depth=80, bootstrap=True, score=-97267369747.85666, total=   0.7s
+[CV] n_estimators=300, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=100, bootstrap=True 
+[CV]  n_estimators=300, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=100, bootstrap=True, score=-54015471106.98012, total=   3.4s
+[CV] n_estimators=300, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=100, bootstrap=True 
+[CV]  n_estimators=300, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=100, bootstrap=True, score=-280292630458.44183, total=   3.3s
+[CV] n_estimators=300, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=100, bootstrap=True 
+[CV]  n_estimators=300, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=100, bootstrap=True, score=-234029423194.15356, total=   3.4s
+[CV] n_estimators=500, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=10, bootstrap=True 
+[CV]  n_estimators=300, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=100, bootstrap=True, score=-79983169619.67857, total=   3.3s
+[CV] n_estimators=500, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=10, bootstrap=True 
+[CV]  n_estimators=300, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=100, bootstrap=True, score=-79071655337.93568, total=   3.4s
+[CV] n_estimators=500, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=10, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=10, bootstrap=True, score=-48434489321.81456, total=   5.2s
+[CV] n_estimators=500, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=10, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=10, bootstrap=True, score=-274368577266.1711, total=   5.2s
+[CV] n_estimators=500, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=10, bootstrap=True 
+[CV]  n_estimators=500, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=10, bootstrap=True, score=-222366966371.0124, total=   5.2s
+[CV] n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=70, bootstrap=False 
+[CV]  n_estimators=500, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=10, bootstrap=True, score=-74799077749.24623, total=   5.1s
+[CV] n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=70, bootstrap=False 
+[CV]  n_estimators=500, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=10, bootstrap=True, score=-59283394092.37511, total=   5.2s
+[CV] n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=70, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=70, bootstrap=False, score=-51576475335.22915, total=   6.3s
+[CV] n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=70, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=70, bootstrap=False, score=-224411397921.17957, total=   6.3s
+[CV] n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=70, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=70, bootstrap=False, score=-242199359911.6384, total=   6.2s
+[CV] n_estimators=400, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=50, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=70, bootstrap=False, score=-80491972209.98727, total=   6.2s
+[CV] n_estimators=400, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=50, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=70, bootstrap=False, score=-81312757946.26633, total=   6.3s
+[CV] n_estimators=400, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=50, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=50, bootstrap=False, score=-58851560894.44731, total=   6.2s
+[CV] n_estimators=400, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=50, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=50, bootstrap=False, score=-253754040628.59723, total=   6.1s
+[CV] n_estimators=400, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=50, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=50, bootstrap=False, score=-245002722166.56412, total=   6.1s
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=90, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=50, bootstrap=False, score=-81750879290.75717, total=   6.1s
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=90, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=19, min_samples_leaf=4, max_features=sqrt, max_depth=50, bootstrap=False, score=-83856582961.78976, total=   6.3s
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=90, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=90, bootstrap=True, score=-49715884471.9728, total= 1.3min
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=90, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=90, bootstrap=True, score=-234623858371.76257, total= 1.3min
+[CV] n_estimators=1000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=90, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=90, bootstrap=True, score=-276296961297.08093, total= 1.3min
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=150, bootstrap=True, score=-85309166573.13753, total= 2.7min
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=90, bootstrap=True, score=-88496501053.02295, total= 1.3min
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=19, min_samples_leaf=3, max_features=auto, max_depth=90, bootstrap=True, score=-84405171468.42445, total= 1.3min
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True, score=-35929936864.9319, total= 2.4min
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True, score=-178215563741.55606, total= 2.4min
+[CV] n_estimators=100, min_samples_split=5, min_samples_leaf=3, max_features=sqrt, max_depth=90, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=5, min_samples_leaf=3, max_features=sqrt, max_depth=90, bootstrap=True, score=-49469397718.14476, total=   1.1s
+[CV] n_estimators=100, min_samples_split=5, min_samples_leaf=3, max_features=sqrt, max_depth=90, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=5, min_samples_leaf=3, max_features=sqrt, max_depth=90, bootstrap=True, score=-290333364102.34064, total=   1.1s
+[CV] n_estimators=100, min_samples_split=5, min_samples_leaf=3, max_features=sqrt, max_depth=90, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=5, min_samples_leaf=3, max_features=sqrt, max_depth=90, bootstrap=True, score=-226112516064.4552, total=   1.1s
+[CV] n_estimators=100, min_samples_split=5, min_samples_leaf=3, max_features=sqrt, max_depth=90, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=5, min_samples_leaf=3, max_features=sqrt, max_depth=90, bootstrap=True, score=-84699852157.89972, total=   1.1s
+[CV] n_estimators=100, min_samples_split=5, min_samples_leaf=3, max_features=sqrt, max_depth=90, bootstrap=True 
+[CV]  n_estimators=100, min_samples_split=5, min_samples_leaf=3, max_features=sqrt, max_depth=90, bootstrap=True, score=-71296996628.6341, total=   1.1s
+[CV] n_estimators=3000, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True, score=-47796357495.53831, total=  32.9s
+[CV] n_estimators=3000, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True, score=-219426929045.0764, total= 2.4min
+[CV] n_estimators=3000, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True, score=-73981506486.05899, total= 2.4min
+[CV] n_estimators=3000, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True, score=-284606165144.0868, total=  32.8s
+[CV] n_estimators=3000, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True, score=-229710903328.43326, total=  32.9s
+[CV] n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True, score=-83609046131.65704, total=  32.7s
+[CV] n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=5, min_samples_leaf=4, max_features=sqrt, max_depth=150, bootstrap=True, score=-76871624424.66068, total=  33.1s
+[CV] n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=False 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=1, max_features=auto, max_depth=60, bootstrap=True, score=-57635865775.09838, total= 2.4min
+[CV] n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=False, score=-46624929727.9683, total=  58.6s
+[CV] n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=False, score=-201661559110.8124, total=  57.8s
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=90, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=False, score=-185840051903.33405, total=  57.6s
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=90, bootstrap=False 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=90, bootstrap=False, score=-44843714355.51935, total=  27.9s
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=90, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=False, score=-58639069240.19952, total=  57.7s
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=90, bootstrap=False 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=90, bootstrap=False, score=-208166124693.56226, total=  27.5s
+[CV] n_estimators=1500, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=90, bootstrap=False 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=90, bootstrap=False, score=-192336875979.90686, total=  27.4s
+[CV] n_estimators=50, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=7, min_samples_leaf=1, max_features=sqrt, max_depth=60, bootstrap=False, score=-49391361295.29476, total=  58.6s
+[CV] n_estimators=50, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True 
+[CV]  n_estimators=50, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True, score=-51080101296.17044, total=   3.9s
+[CV] n_estimators=50, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True 
+[CV]  n_estimators=50, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True, score=-243906480407.338, total=   3.7s
+[CV] n_estimators=50, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True 
+[CV]  n_estimators=50, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True, score=-279380744008.4275, total=   3.8s
+[CV] n_estimators=50, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=90, bootstrap=False, score=-61623966206.54533, total=  27.6s
+[CV] n_estimators=50, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True, score=-79793649050.68704, total=   3.8s
+[CV] n_estimators=50, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=False, score=-48541634400.3777, total=   0.8s
+[CV] n_estimators=50, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=False, score=-203682551278.63873, total=   0.7s
+[CV] n_estimators=50, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=False, score=-206622447981.8614, total=   0.7s
+[CV] n_estimators=50, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=False, score=-77536689145.24289, total=   0.8s
+[CV] n_estimators=200, min_samples_split=11, min_samples_leaf=4, max_features=sqrt, max_depth=70, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=11, min_samples_leaf=3, max_features=sqrt, max_depth=40, bootstrap=False, score=-54876680119.10995, total=   0.8s
+[CV] n_estimators=200, min_samples_split=11, min_samples_leaf=4, max_features=sqrt, max_depth=70, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=19, min_samples_leaf=4, max_features=auto, max_depth=40, bootstrap=True, score=-87832522038.2169, total=   3.8s
+[CV] n_estimators=200, min_samples_split=11, min_samples_leaf=4, max_features=sqrt, max_depth=70, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=11, min_samples_leaf=4, max_features=sqrt, max_depth=70, bootstrap=False, score=-45939536208.65892, total=   3.2s
+[CV] n_estimators=200, min_samples_split=11, min_samples_leaf=4, max_features=sqrt, max_depth=70, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=11, min_samples_leaf=4, max_features=sqrt, max_depth=70, bootstrap=False, score=-213891253788.37292, total=   3.2s
+[CV] n_estimators=200, min_samples_split=11, min_samples_leaf=4, max_features=sqrt, max_depth=70, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=11, min_samples_leaf=4, max_features=sqrt, max_depth=70, bootstrap=False, score=-203268982351.3984, total=   3.2s
+[CV] n_estimators=2000, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=30, bootstrap=False 
+[CV]  n_estimators=1500, min_samples_split=7, min_samples_leaf=2, max_features=sqrt, max_depth=90, bootstrap=False, score=-55473582853.83332, total=  28.0s
+[CV] n_estimators=2000, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=30, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=11, min_samples_leaf=4, max_features=sqrt, max_depth=70, bootstrap=False, score=-72674587377.10411, total=   3.3s
+[CV] n_estimators=2000, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=30, bootstrap=False 
+[CV]  n_estimators=200, min_samples_split=11, min_samples_leaf=4, max_features=sqrt, max_depth=70, bootstrap=False, score=-64294018233.78479, total=   3.3s
+[CV] n_estimators=2000, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=30, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=30, bootstrap=False, score=-49348441509.62116, total=  36.3s
+[CV] n_estimators=2000, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=30, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=30, bootstrap=False, score=-203272133244.70084, total=  36.0s
+[CV] n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=30, bootstrap=False, score=-199466538930.0002, total=  35.6s
+[CV] n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False 
+[CV]  n_estimators=2000, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=30, bootstrap=False, score=-62497986183.84543, total=  35.8s
+[CV] n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False, score=-59199905677.53647, total=   5.6s
+[CV] n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False, score=-215060611683.81863, total=   5.6s
+[CV] n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False 
+[CV]  n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False, score=-248799352742.64474, total=   5.6s
+[CV] n_estimators=1000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False, score=-75350752498.0791, total=   5.6s
+[CV] n_estimators=1000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=400, min_samples_split=19, min_samples_leaf=3, max_features=sqrt, max_depth=10, bootstrap=False, score=-81863294436.17435, total=   5.6s
+[CV] n_estimators=1000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=2000, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=30, bootstrap=False, score=-53686416340.43847, total=  36.5s
+[CV] n_estimators=1000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True, score=-34699784520.856445, total= 1.6min
+[CV] n_estimators=1000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True, score=-176256327863.42532, total= 1.5min
+[CV] n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=90, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True, score=-220753468031.5399, total= 1.6min
+[CV] n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=90, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True, score=-73451917712.44345, total= 1.5min
+[CV] n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=90, bootstrap=False 
+[CV]  n_estimators=1000, min_samples_split=7, min_samples_leaf=2, max_features=auto, max_depth=80, bootstrap=True, score=-63941725214.366104, total= 1.6min
+[CV] n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=90, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=90, bootstrap=False, score=-265188039355.3501, total= 6.8min
+[CV] n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=90, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=90, bootstrap=False, score=-288440649860.66345, total= 7.5min
+[CV] n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=True, score=-49818061374.667336, total=   2.7s
+[CV] n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=True, score=-258299123955.26312, total=   2.6s
+[CV] n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=True, score=-201295370687.04486, total=   2.6s
+[CV] n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=True, score=-83272220661.02507, total=   2.6s
+[CV] n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=True 
+[CV]  n_estimators=200, min_samples_split=3, min_samples_leaf=1, max_features=sqrt, max_depth=150, bootstrap=True, score=-48889338509.83367, total=   2.7s
+[CV] n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=70, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=70, bootstrap=False, score=-64376036168.60001, total=   0.8s
+[CV] n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=70, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=70, bootstrap=False, score=-222489057608.71335, total=   0.8s
+[CV] n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=70, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=70, bootstrap=False, score=-209330191155.247, total=   0.8s
+[CV] n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=70, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=70, bootstrap=False, score=-76020094063.0987, total=   0.8s
+[CV] n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=70, bootstrap=False 
+[CV]  n_estimators=50, min_samples_split=11, min_samples_leaf=1, max_features=sqrt, max_depth=70, bootstrap=False, score=-43298652388.35562, total=   0.8s
+[CV] n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=90, bootstrap=False, score=-285781194922.877, total= 7.5min
+[CV] n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=False, score=-53456581479.09838, total=  49.7s
+[CV] n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=False, score=-214041277449.6224, total=  49.1s
+[CV] n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=90, bootstrap=False, score=-317628364546.6239, total= 7.5min
+[CV] n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=False 
+[CV]  n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=False, score=-229753454006.21085, total=  49.1s
+[CV] n_estimators=1000, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=10, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=False, score=-72220983703.35237, total=  49.0s
+[CV] n_estimators=1000, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=10, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=10, bootstrap=True, score=-53087908666.278564, total=   9.9s
+[CV] n_estimators=1000, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=10, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=10, bootstrap=True, score=-287775000220.8462, total=   9.8s
+[CV] n_estimators=1000, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=10, bootstrap=True 
+[CV]  n_estimators=1000, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=10, bootstrap=True, score=-248964448546.16467, total=   9.8s
+[CV] n_estimators=1000, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=10, bootstrap=True 
+[CV]  n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=sqrt, max_depth=150, bootstrap=False, score=-73834128719.98883, total=  49.9s
+[CV]  n_estimators=1000, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=10, bootstrap=True, score=-88652531792.12044, total=   9.8s
+[CV]  n_estimators=1000, min_samples_split=13, min_samples_leaf=2, max_features=sqrt, max_depth=10, bootstrap=True, score=-79858332637.4279, total=   8.3s
+[CV]  n_estimators=3000, min_samples_split=17, min_samples_leaf=2, max_features=auto, max_depth=90, bootstrap=False, score=-125448417414.35373, total= 5.7min
+[Parallel(n_jobs=-1)]: Done 500 out of 500 | elapsed: 127.2min finished
+--------------------------------------------------
+{'n_estimators': 3000, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 60, 'bootstrap': False}
+--------------------------------------------------
+{'mean_fit_time': array([4.49907071e+02, 8.27046056e+00, 1.30091476e-01, 1.54891769e+01,
+       3.78049943e+02, 5.47067604e+00, 3.39614720e+01, 2.74420474e+01,
+       1.37129176e+01, 1.73562894e+00, 1.80904223e+01, 5.42964697e+00,
+       8.65173063e+00, 2.63998709e+02, 8.20101142e+00, 2.56783988e+01,
+       9.40806632e+00, 8.24940656e+01, 8.22181797e-01, 3.52972158e+01,
+       1.81887212e+02, 1.63471852e+01, 8.12895989e+00, 9.16629529e+00,
+       1.11527032e+01, 1.13260150e+00, 4.37391026e+01, 3.28160983e+02,
+       1.93234944e+01, 1.37849686e+01, 4.90207314e+00, 5.09100771e+00,
+       7.50892067e+00, 1.56616989e+01, 7.93102012e+00, 9.28456545e-01,
+       1.01816200e+01, 4.00563807e+00, 7.89379339e+00, 4.38050361e+00,
+       1.50470632e+01, 4.19930625e+02, 1.47006190e+02, 2.35010543e+01,
+       5.88358998e+01, 3.97761914e+01, 4.60346179e+00, 4.32946749e+00,
+       1.67735282e+02, 5.83173199e+00, 2.84231429e+01, 2.53839708e+02,
+       1.62042830e+01, 7.69144344e-01, 4.38252811e+02, 2.30217162e+01,
+       2.90440250e+02, 7.64373739e+01, 8.43755996e+01, 3.47025948e+01,
+       7.48412403e+01, 5.31856880e+00, 2.49758997e+01, 2.45682164e+01,
+       4.34027462e+00, 6.82249510e+01, 2.34157758e+02, 4.94030042e+00,
+       9.31920571e+00, 1.61042128e+01, 7.77200830e+01, 2.79388005e+01,
+       1.76098787e+01, 1.58307000e+02, 4.97332377e+00, 2.16153126e+00,
+       1.11477423e-01, 1.73121834e-01, 8.05770016e-01, 3.40801425e+00,
+       5.21129208e+00, 6.31587563e+00, 6.22721229e+00, 7.92309532e+01,
+       1.44151967e+02, 1.14541063e+00, 3.25684846e+01, 5.76998921e+01,
+       2.75703410e+01, 3.90596895e+00, 8.46799469e-01, 3.30954518e+00,
+       3.58458036e+01, 5.64720130e+00, 9.31828406e+01, 4.20516742e+02,
+       2.72513013e+00, 8.96433926e-01, 4.90447619e+01, 9.49512792e+00]), 'std_fit_time': array([1.42569119e+01, 7.93619545e-02, 8.08056828e-03, 9.55572563e-02,
+       6.70395914e+00, 3.07228773e-02, 2.09136033e-01, 1.72598840e-01,
+       4.51461490e-01, 5.02141599e-02, 1.58601879e-01, 8.72592016e-02,
+       7.96042085e-02, 2.44973042e+00, 8.70161027e-02, 1.79503582e-01,
+       7.39220849e-02, 6.27332756e-01, 7.71513135e-03, 4.76246159e-01,
+       1.38992065e+00, 4.76050821e-02, 3.78499877e-02, 7.88755539e-02,
+       5.94102343e-02, 5.34783527e-03, 1.42515566e+00, 1.06590019e+01,
+       1.48962335e-01, 6.14221916e-02, 1.97986869e-02, 4.87983449e-02,
+       1.54834854e-01, 1.61320451e-01, 1.31696775e-01, 5.69661925e-02,
+       8.99423590e-02, 4.39878268e-02, 6.82997020e-02, 3.43676431e-02,
+       4.47905419e-01, 1.58601936e+01, 5.27151914e+00, 1.21223367e-01,
+       4.08084700e-01, 3.85099133e-01, 5.90043188e-02, 2.80604335e-02,
+       1.73264262e+00, 6.36958938e-02, 1.01724260e+00, 5.60025685e+00,
+       1.63396422e-01, 1.27936497e-02, 1.39762356e+01, 9.25439263e-02,
+       2.58848181e+00, 1.31932712e+00, 1.14285172e+00, 1.84629449e-01,
+       2.30691027e+00, 5.13992514e-02, 2.09359803e-01, 2.18996519e-01,
+       3.73541776e-02, 5.72631482e-01, 7.52978434e+00, 3.35461770e-02,
+       8.43923093e-02, 1.25700525e-01, 7.07790445e-01, 9.52516108e-01,
+       3.57829008e-01, 1.55753329e+00, 1.45064915e-02, 1.60239519e-02,
+       5.88863930e-03, 6.57752668e-03, 1.19309387e-02, 2.28947660e-02,
+       2.22379754e-02, 4.70464786e-02, 5.36418904e-02, 7.26335743e-01,
+       1.28122043e+00, 5.39314119e-03, 1.41722707e-01, 4.22385221e-01,
+       2.28134771e-01, 4.12151792e-02, 6.11667183e-03, 3.80293061e-02,
+       3.05537101e-01, 2.74518185e-02, 8.04151423e-01, 4.32586320e+01,
+       2.35233762e-02, 9.99512323e-03, 3.88758574e-01, 6.05674758e-01]), 'mean_score_time': array([0.40668845, 0.01400986, 0.00280232, 0.13069258, 0.3660594 ,
+       0.06864829, 0.28720345, 0.04223022, 0.01461091, 0.00260224,
+       0.15731158, 0.07065034, 0.01441031, 0.42510161, 0.01441035,
+       0.30901923, 0.01421046, 0.12608957, 0.00780597, 0.05263743,
+       0.27999854, 0.20474463, 0.01521111, 0.01821327, 0.13749752,
+       0.01441116, 0.0400281 , 0.28540225, 0.02862024, 0.16111431,
+       0.05884161, 0.04303045, 0.00780625, 0.02541804, 0.06584659,
+       0.00820646, 0.12829056, 0.0328238 , 0.06824956, 0.0524374 ,
+       0.01421046, 0.37246366, 0.13649645, 0.28039899, 0.48094063,
+       0.06644726, 0.00880647, 0.05603991, 0.27299347, 0.0470336 ,
+       0.02521777, 0.21955581, 0.02641883, 0.00820599, 0.38607397,
+       0.27659636, 0.4235003 , 0.1244885 , 0.13649712, 0.05684018,
+       0.07565379, 0.0656466 , 0.0386272 , 0.03862715, 0.03642659,
+       0.06464577, 0.20774713, 0.06264434, 0.0144105 , 0.02521796,
+       0.12088575, 0.02401729, 0.01661248, 0.24857588, 0.06024303,
+       0.03062196, 0.00220189, 0.0024024 , 0.00200171, 0.04323092,
+       0.07125053, 0.0530375 , 0.05283809, 0.12548923, 0.2077477 ,
+       0.0148109 , 0.40268354, 0.45412173, 0.22616076, 0.00720563,
+       0.00840616, 0.03022275, 0.29921241, 0.05043535, 0.14530501,
+       0.34164548, 0.03162255, 0.00780611, 0.402285  , 0.11868477]), 'std_score_time': array([5.78691667e-03, 1.09632350e-03, 4.00638694e-04, 2.33396995e-03,
+       3.30224935e-02, 1.49747218e-03, 5.37019929e-03, 4.00376416e-04,
+       3.72280883e-03, 4.90582726e-04, 1.06358217e-02, 3.88071783e-03,
+       8.00824284e-04, 2.56416421e-02, 1.85611642e-03, 9.66890337e-03,
+       4.00066461e-04, 3.69021413e-03, 4.00376671e-04, 4.90835858e-04,
+       1.37995326e-02, 6.28335932e-03, 1.94054955e-03, 5.42217574e-03,
+       5.20387247e-03, 4.90018253e-04, 1.55015839e-03, 5.84848267e-03,
+       4.89784651e-04, 5.10233446e-03, 2.85855777e-03, 2.36843661e-03,
+       7.48952801e-04, 4.90174497e-04, 2.71492189e-03, 1.16796237e-03,
+       1.72178728e-03, 9.81029674e-04, 7.57860744e-03, 1.35750668e-03,
+       4.00424610e-04, 6.01747400e-03, 1.23149493e-02, 9.39607551e-03,
+       4.71983132e-03, 5.82151732e-03, 4.00066546e-04, 1.78981766e-03,
+       1.89592384e-02, 3.10023980e-03, 1.16695641e-03, 4.96732910e-03,
+       1.74474593e-03, 1.16714445e-03, 4.07251757e-03, 6.12351397e-03,
+       1.34766210e-02, 5.20354785e-03, 1.51978064e-02, 6.14916440e-03,
+       1.52371938e-02, 1.20093825e-03, 1.20100985e-03, 1.35781602e-03,
+       3.82884921e-03, 2.87256123e-03, 4.17899878e-03, 1.85608054e-03,
+       4.89979335e-04, 3.99971378e-04, 1.60105826e-03, 6.32862139e-04,
+       4.90135054e-04, 1.45372265e-02, 2.13734205e-03, 5.20386698e-03,
+       4.00734231e-04, 4.90096669e-04, 4.62310777e-07, 2.31681618e-03,
+       1.30230502e-02, 8.94895510e-04, 2.13679726e-03, 4.03286440e-03,
+       6.59596840e-03, 4.00710826e-04, 8.24126836e-03, 8.28565499e-03,
+       1.22236154e-02, 4.00352506e-04, 1.20099386e-03, 1.32948013e-03,
+       1.77890141e-02, 1.85635819e-03, 1.59036572e-02, 6.43536489e-02,
+       4.90096159e-04, 4.00686307e-04, 1.61108820e-02, 1.31020666e-02]), 'param_n_estimators': masked_array(data=[3000, 100, 10, 1000, 2000, 500, 2000, 300, 100, 10,
+                   1000, 500, 100, 3000, 100, 2000, 100, 1000, 50, 400,
+                   2000, 1500, 100, 100, 1000, 100, 300, 2000, 200, 1000,
+                   400, 300, 50, 200, 500, 50, 1000, 200, 400, 400, 100,
+                   3000, 1000, 2000, 3000, 500, 50, 400, 2000, 300, 200,
+                   1500, 200, 50, 3000, 2000, 3000, 1000, 1000, 400, 500,
+                   500, 300, 300, 200, 500, 1500, 500, 100, 200, 1000,
+                   200, 100, 2000, 400, 200, 10, 10, 10, 300, 500, 400,
+                   400, 1000, 1500, 100, 3000, 3000, 1500, 50, 50, 200,
+                   2000, 400, 1000, 3000, 200, 50, 3000, 1000],
+             mask=[False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False],
+       fill_value='?',
+            dtype=object), 'param_min_samples_split': masked_array(data=[7, 17, 5, 19, 3, 3, 7, 5, 19, 3, 2, 11, 3, 13, 13, 5,
+                   7, 19, 13, 13, 7, 3, 3, 3, 11, 7, 11, 7, 7, 3, 7, 17,
+                   17, 19, 19, 11, 17, 5, 3, 13, 7, 19, 13, 7, 3, 17, 2,
+                   17, 11, 7, 17, 7, 17, 3, 11, 2, 7, 17, 17, 5, 2, 13,
+                   11, 19, 3, 5, 7, 19, 7, 19, 19, 19, 5, 19, 3, 2, 13, 5,
+                   17, 11, 7, 19, 19, 19, 7, 5, 5, 7, 7, 19, 11, 11, 11,
+                   19, 7, 17, 3, 11, 17, 13],
+             mask=[False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False],
+       fill_value='?',
+            dtype=object), 'param_min_samples_leaf': masked_array(data=[4, 2, 2, 4, 1, 4, 4, 3, 4, 2, 3, 3, 4, 1, 4, 1, 2, 1,
+                   4, 1, 3, 4, 3, 3, 2, 3, 4, 2, 1, 1, 1, 1, 1, 4, 4, 1,
+                   4, 1, 2, 2, 4, 3, 3, 2, 2, 4, 3, 1, 4, 1, 3, 1, 3, 3,
+                   4, 3, 1, 2, 1, 4, 4, 3, 4, 1, 1, 2, 3, 4, 2, 2, 4, 3,
+                   1, 3, 2, 4, 3, 4, 4, 1, 1, 3, 4, 3, 1, 3, 4, 1, 2, 4,
+                   3, 4, 1, 3, 2, 2, 1, 1, 2, 2],
+             mask=[False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False],
+       fill_value='?',
+            dtype=object), 'param_max_features': masked_array(data=['auto', 'auto', 'sqrt', 'sqrt', 'auto', 'sqrt', 'sqrt',
+                   'auto', 'auto', 'auto', 'sqrt', 'sqrt', 'auto', 'auto',
+                   'auto', 'sqrt', 'auto', 'auto', 'sqrt', 'auto', 'auto',
+                   'sqrt', 'auto', 'auto', 'sqrt', 'sqrt', 'auto', 'auto',
+                   'auto', 'sqrt', 'sqrt', 'sqrt', 'auto', 'auto', 'sqrt',
+                   'sqrt', 'sqrt', 'sqrt', 'sqrt', 'sqrt', 'auto', 'auto',
+                   'auto', 'sqrt', 'sqrt', 'auto', 'auto', 'sqrt', 'auto',
+                   'sqrt', 'auto', 'auto', 'auto', 'sqrt', 'auto', 'sqrt',
+                   'auto', 'auto', 'auto', 'auto', 'auto', 'sqrt', 'auto',
+                   'auto', 'sqrt', 'auto', 'auto', 'sqrt', 'auto', 'auto',
+                   'auto', 'auto', 'auto', 'auto', 'sqrt', 'sqrt', 'sqrt',
+                   'sqrt', 'auto', 'sqrt', 'sqrt', 'sqrt', 'sqrt', 'auto',
+                   'auto', 'sqrt', 'sqrt', 'sqrt', 'sqrt', 'auto', 'sqrt',
+                   'sqrt', 'sqrt', 'sqrt', 'auto', 'auto', 'sqrt', 'sqrt',
+                   'sqrt', 'sqrt'],
+             mask=[False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False],
+       fill_value='?',
+            dtype=object), 'param_max_depth': masked_array(data=[100, 20, 80, 40, 40, 90, 120, 70, 80, 40, 100, 150, 30,
+                   20, 40, 80, 80, 100, 150, 100, None, 40, 10, 50, 30,
+                   20, None, 40, 60, 60, None, 80, 30, None, 20, 20, 150,
+                   20, 30, 40, 100, 150, 50, 150, 80, 50, 30, 60, 20, 40,
+                   30, 70, 150, 10, 60, 100, 90, 10, 70, 20, 40, 120, 20,
+                   None, 150, 10, 50, 90, None, 120, 80, 120, 120, 150,
+                   40, 30, 40, 90, 80, 100, 10, 70, 50, 90, 60, 90, 150,
+                   60, 90, 40, 40, 70, 30, 10, 80, 90, 150, 70, 150, 10],
+             mask=[False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False],
+       fill_value='?',
+            dtype=object), 'param_bootstrap': masked_array(data=[False, True, True, False, False, True, False, True,
+                   False, False, False, True, True, True, True, True,
+                   True, True, False, True, True, True, True, True, True,
+                   True, False, False, True, True, True, False, False,
+                   True, False, False, True, False, False, True, False,
+                   False, False, True, False, True, True, True, True,
+                   False, False, False, True, False, False, True, True,
+                   True, True, True, False, True, True, True, False,
+                   False, False, True, True, True, True, False, False,
+                   True, True, True, True, False, True, True, True, False,
+                   False, True, True, True, True, False, False, True,
+                   False, False, False, False, True, False, True, False,
+                   False, True],
+             mask=[False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False, False, False, False, False,
+                   False, False, False, False],
+       fill_value='?',
+            dtype=object), 'params': [  # {'n_estimators': 3000, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 60, 'bootstrap': False} 베스트
+{'n_estimators': 3000, 'min_samples_split': 7, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 100, 'bootstrap': False}, 	1   84
+{'n_estimators': 100, 'min_samples_split': 17, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 20, 'bootstrap': True}, 	2   44
+{'n_estimators': 10, 'min_samples_split': 5, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 80, 'bootstrap': True}, 	3   77
+{'n_estimators': 1000, 'min_samples_split': 19, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 40, 'bootstrap': False}, 	4   51
+{'n_estimators': 2000, 'min_samples_split': 3, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 40, 'bootstrap': False}, 	5   82
+{'n_estimators': 500, 'min_samples_split': 3, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 90, 'bootstrap': True}, 	6   66 
+{'n_estimators': 2000, 'min_samples_split': 7, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 120, 'bootstrap': False}, 	7   22
+{'n_estimators': 300, 'min_samples_split': 5, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 70, 'bootstrap': True}, 	8   18
+{'n_estimators': 100, 'min_samples_split': 19, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 80, 'bootstrap': False}, 	9   100
+{'n_estimators': 10, 'min_samples_split': 3, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 40, 'bootstrap': False}, 	10  90
+{'n_estimators': 1000, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 100, 'bootstrap': False}, 	11  11
+{'n_estimators': 500, 'min_samples_split': 11, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 150, 'bootstrap': True}, 	12  72
+{'n_estimators': 100, 'min_samples_split': 3, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 30, 'bootstrap': True}, 	13  17
+{'n_estimators': 3000, 'min_samples_split': 13, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 20, 'bootstrap': True}, 	14  30
+{'n_estimators': 100, 'min_samples_split': 13, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 40, 'bootstrap': True}, 	15  33
+{'n_estimators': 2000, 'min_samples_split': 5, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 80, 'bootstrap': True}, 	16  37
+{'n_estimators': 100, 'min_samples_split': 7, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 80, 'bootstrap': True}, 	17  14
+{'n_estimators': 1000, 'min_samples_split': 19, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 100, 'bootstrap': True}, 	18  63
+{'n_estimators': 50, 'min_samples_split': 13, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 150, 'bootstrap': False}, 	19  34
+{'n_estimators': 400, 'min_samples_split': 13, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 100, 'bootstrap': True}, 	20  32
+{'n_estimators': 2000, 'min_samples_split': 7, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': None, 'bootstrap': True},	21  19
+{'n_estimators': 1500, 'min_samples_split': 3, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 40, 'bootstrap': True}, 	22  62
+{'n_estimators': 100, 'min_samples_split': 3, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}, 	23  2 ----------
+{'n_estimators': 100, 'min_samples_split': 3, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 50, 'bootstrap': True},	24  20
+{'n_estimators': 1000, 'min_samples_split': 11, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 30, 'bootstrap': True},	25  60
+{'n_estimators': 100, 'min_samples_split': 7, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 20, 'bootstrap': True}, 	26  70
+{'n_estimators': 300, 'min_samples_split': 11, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': None, 'bootstrap': False},	27  91
+{'n_estimators': 2000, 'min_samples_split': 7, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 40, 'bootstrap': False}, 	28  89
+{'n_estimators': 200, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 60, 'bootstrap': True},	29  24
+{'n_estimators': 1000, 'min_samples_split': 3, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 60, 'bootstrap': True},	30  35
+{'n_estimators': 400, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': None, 'bootstrap': True}, 	31  41
+{'n_estimators': 300, 'min_samples_split': 17, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 80, 'bootstrap': False}, 	32  40
+{'n_estimators': 50, 'min_samples_split': 17, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 30, 'bootstrap': False},	33  94
+{'n_estimators': 200, 'min_samples_split': 19, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': None, 'bootstrap': True}, 	34  71
+{'n_estimators': 500, 'min_samples_split': 19, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 20, 'bootstrap': False}, 	35  54
+{'n_estimators': 50, 'min_samples_split': 11, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 20, 'bootstrap': False}, 	36  21
+{'n_estimators': 1000, 'min_samples_split': 17, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 150, 'bootstrap': True}, 	37  79
+{'n_estimators': 200, 'min_samples_split': 5, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 20, 'bootstrap': False}, 	38  10 -----------
+{'n_estimators': 400, 'min_samples_split': 3, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 30, 'bootstrap': False}, 	39  3 ----------
+{'n_estimators': 400, 'min_samples_split': 13, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 40, 'bootstrap': True}, 	40  74
+{'n_estimators': 100, 'min_samples_split': 7, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 100, 'bootstrap': False}, 	41  86
+{'n_estimators': 3000, 'min_samples_split': 19, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 150, 'bootstrap': False}, 	42  98
+{'n_estimators': 1000, 'min_samples_split': 13, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 50, 'bootstrap': False}, 	43  96
+{'n_estimators': 2000, 'min_samples_split': 7, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 150, 'bootstrap': True}, 	44  42
+{'n_estimators': 3000, 'min_samples_split': 3, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 80, 'bootstrap': False}, 	45  6 ----------
+{'n_estimators': 500, 'min_samples_split': 17, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 50, 'bootstrap': True},	46  53
+{'n_estimators': 50, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 30, 'bootstrap': True}, 	47  4 ---------
+{'n_estimators': 400, 'min_samples_split': 17, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 60, 'bootstrap': True}, 	48  78
+{'n_estimators': 2000, 'min_samples_split': 11, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 20, 'bootstrap': True}, 	49  28
+{'n_estimators': 300, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 40, 'bootstrap': False}, 	50  9 ---------
+{'n_estimators': 200, 'min_samples_split': 17, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 30, 'bootstrap': False}, 	51  97
+{'n_estimators': 1500, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 70, 'bootstrap': False}, 	52  93
+{'n_estimators': 200, 'min_samples_split': 17, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 150, 'bootstrap': True}, 	53  50
+{'n_estimators': 50, 'min_samples_split': 3, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': False}, 	54  23
+{'n_estimators': 3000, 'min_samples_split': 11, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 60, 'bootstrap': False},	55  92
+{'n_estimators': 2000, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 100, 'bootstrap': True}, 	56  52
+{'n_estimators': 3000, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 90, 'bootstrap': True}, 	57  5 ---------
+{'n_estimators': 1000, 'min_samples_split': 17, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}, 	58  48
+{'n_estimators': 1000, 'min_samples_split': 17, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 70, 'bootstrap': True}, 	59  49
+{'n_estimators': 400, 'min_samples_split': 5, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 20, 'bootstrap': True}, 	60  25
+{'n_estimators': 500, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 40, 'bootstrap': False}, 	61  85
+{'n_estimators': 500, 'min_samples_split': 13, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 120, 'bootstrap': True}, 	62  75
+{'n_estimators': 300, 'min_samples_split': 11, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 20, 'bootstrap': True}, 	63  27
+{'n_estimators': 300, 'min_samples_split': 19, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': None, 'bootstrap': True},	64  64
+ {'n_estimators': 200, 'min_samples_split': 3, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 150, 'bootstrap': False}, 	65  7 ---------
+{'n_estimators': 500, 'min_samples_split': 5, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': False}, 	66  87
+{'n_estimators': 1500, 'min_samples_split': 7, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 50, 'bootstrap': False}, 	67  88
+{'n_estimators': 500, 'min_samples_split': 19, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 90, 'bootstrap': True}, 	68  80
+{'n_estimators': 100, 'min_samples_split': 7, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': None, 'bootstrap': True}, 	69  14
+{'n_estimators': 200, 'min_samples_split': 19, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 120, 'bootstrap': True}, 	70  67
+{'n_estimators': 1000, 'min_samples_split': 19, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 80, 'bootstrap': True}, 	71  68
+{'n_estimators': 200, 'min_samples_split': 19, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 120, 'bootstrap': False}, 	72  99
+{'n_estimators': 100, 'min_samples_split': 5, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 120, 'bootstrap': False}, 	73  83
+{'n_estimators': 2000, 'min_samples_split': 19, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 150, 'bootstrap': True}, 	74  59
+{'n_estimators': 400, 'min_samples_split': 3, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 40, 'bootstrap': True}, 	75  39
+{'n_estimators': 200, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 30, 'bootstrap': True}, 	76  55
+{'n_estimators': 10, 'min_samples_split': 13, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 40, 'bootstrap': True}, 	77  81
+{'n_estimators': 10, 'min_samples_split': 5, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 90, 'bootstrap': False}, 	78  43
+{'n_estimators': 10, 'min_samples_split': 17, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 80, 'bootstrap': True}, 	79  76
+{'n_estimators': 300, 'min_samples_split': 11, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 100, 'bootstrap': True},	80  61
+ {'n_estimators': 500, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}, 	81  45
+{'n_estimators': 400, 'min_samples_split': 19, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 70, 'bootstrap': False}, 	82  46
+{'n_estimators': 400, 'min_samples_split': 19, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 50, 'bootstrap': False}, 	83  58
+{'n_estimators': 1000, 'min_samples_split': 19, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 90, 'bootstrap': True}, 	84  65
+{'n_estimators': 1500, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 60, 'bootstrap': True}, 	85  12
+{'n_estimators': 100, 'min_samples_split': 5, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 90, 'bootstrap': True}, 	86  56
+{'n_estimators': 3000, 'min_samples_split': 5, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 150, 'bootstrap': True},	87  57
+{'n_estimators': 3000, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 60, 'bootstrap': False}, 	88  1 --이게 베스트
+{'n_estimators': 1500, 'min_samples_split': 7, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 90, 'bootstrap': False}, 	89  8 ---------
+{'n_estimators': 50, 'min_samples_split': 19, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 40, 'bootstrap': True}, 	90  69
+{'n_estimators': 50, 'min_samples_split': 11, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 40, 'bootstrap': False}, 	91  26
+{'n_estimators': 200, 'min_samples_split': 11, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 70, 'bootstrap': False}, 	92  29
+{'n_estimators': 2000, 'min_samples_split': 11, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 30, 'bootstrap': False}, 	93  13
+{'n_estimators': 400, 'min_samples_split': 19, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': False}, 	94  47
+{'n_estimators': 1000, 'min_samples_split': 7, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 80, 'bootstrap': True}, 	95  16
+{'n_estimators': 3000, 'min_samples_split': 17, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 90, 'bootstrap': False}, 	96  95
+{'n_estimators': 200, 'min_samples_split': 3, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 150, 'bootstrap': True}, 	97  36
+{'n_estimators': 50, 'min_samples_split': 11, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 70, 'bootstrap': False},	98  31
+{'n_estimators': 3000, 'min_samples_split': 17, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 150, 'bootstrap': False},	99  38
+{'n_estimators': 1000, 'min_samples_split': 13, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}], 	100 73
+'split0_test_score': array([-1.79463058e+11, -4.77424601e+10, -7.79993576e+10, -5.58205597e+10,
+       -1.49458349e+11, -4.95627121e+10, -4.46250061e+10, -3.60757142e+10,
+       -2.87068817e+11, -1.56396680e+11, -4.55626898e+10, -5.05456890e+10,
+       -3.47746686e+10, -4.10288418e+10, -4.16464105e+10, -4.56726118e+10,
+       -3.57450703e+10, -5.01795602e+10, -5.02229060e+10, -4.18461349e+10,
+       -3.53511516e+10, -4.78862352e+10, -3.65416189e+10, -3.67356806e+10,
+       -4.90942278e+10, -4.96428068e+10, -2.11797488e+11, -1.46132409e+11,
+       -3.75763899e+10, -4.51261668e+10, -4.51101140e+10, -5.91077575e+10,
+       -2.88565149e+11, -5.04241289e+10, -5.84624961e+10, -5.21670770e+10,
+       -5.76541417e+10, -4.79386354e+10, -4.28928277e+10, -5.09781493e+10,
+       -1.79532198e+11, -2.86510756e+11, -2.21908978e+11, -4.57381540e+10,
+       -4.43428585e+10, -4.74202047e+10, -4.02594977e+10, -5.97832106e+10,
+       -3.88617138e+10, -4.70582594e+10, -2.88342123e+11, -1.44228421e+11,
+       -4.80035980e+10, -6.10313713e+10, -2.11723791e+11, -4.71053840e+10,
+       -3.53039442e+10, -4.69877675e+10, -4.75388587e+10, -3.71140595e+10,
+       -1.79513814e+11, -5.45793964e+10, -3.87475884e+10, -4.99720216e+10,
+       -4.96502488e+10, -1.51639811e+11, -1.69484063e+11, -5.86218719e+10,
+       -3.57450703e+10, -5.04716674e+10, -5.02189375e+10, -2.86527332e+11,
+       -1.47522302e+11, -4.87504846e+10, -4.38054710e+10, -4.96018683e+10,
+       -8.88422595e+10, -7.80784904e+10, -6.34330668e+10, -5.40154711e+10,
+       -4.84344893e+10, -5.15764753e+10, -5.88515609e+10, -4.97158845e+10,
+       -3.59299369e+10, -4.94693977e+10, -4.77963575e+10, -4.66249297e+10,
+       -4.48437144e+10, -5.10801013e+10, -4.85416344e+10, -4.59395362e+10,
+       -4.93484415e+10, -5.91999057e+10, -3.46997845e+10, -2.88440650e+11,
+       -4.98180614e+10, -6.43760362e+10, -5.34565815e+10, -5.30879087e+10]), 
+'split1_test_score': array([-2.22588800e+11, -2.05963859e+11, -2.80852173e+11, -2.30071195e+11,
+       -2.66994131e+11, -2.85289796e+11, -2.12443503e+11, -1.87098469e+11,
+       -2.72664720e+11, -2.92455700e+11, -2.10014414e+11, -2.94165239e+11,
+       -1.75822102e+11, -1.78143142e+11, -1.87552022e+11, -2.58872858e+11,
+       -1.83624212e+11, -2.33770102e+11, -2.11067904e+11, -1.85487110e+11,
+       -1.74749384e+11, -2.85739130e+11, -1.78816080e+11, -1.87364746e+11,
+       -2.81083332e+11, -2.99209551e+11, -2.33681929e+11, -3.04301076e+11,
+       -1.93935137e+11, -2.61524821e+11, -2.78493712e+11, -2.10471164e+11,
+       -2.66637424e+11, -2.41380123e+11, -2.43889410e+11, -2.07520864e+11,
+       -3.22794765e+11, -2.17491866e+11, -2.12745730e+11, -2.99907839e+11,
+       -2.22545571e+11, -2.71793483e+11, -2.93582144e+11, -2.64561181e+11,
+       -2.16092475e+11, -2.16704610e+11, -1.76766380e+11, -3.23420410e+11,
+       -1.75427867e+11, -2.09214286e+11, -2.71718701e+11, -2.75550366e+11,
+       -2.11209290e+11, -2.27334429e+11, -2.33653881e+11, -2.79223085e+11,
+       -1.77677289e+11, -2.07119061e+11, -2.06064723e+11, -1.79271847e+11,
+       -2.22496542e+11, -3.04017188e+11, -1.78202308e+11, -2.46970855e+11,
+       -2.09505564e+11, -2.98197728e+11, -2.68162716e+11, -3.53597402e+11,
+       -1.83624212e+11, -2.44281811e+11, -2.35654242e+11, -2.71793771e+11,
+       -2.69015098e+11, -2.30961772e+11, -2.61647163e+11, -2.67887657e+11,
+       -3.86359662e+11, -2.15788075e+11, -2.36582066e+11, -2.80292630e+11,
+       -2.74368577e+11, -2.24411398e+11, -2.53754041e+11, -2.34623858e+11,
+       -1.78215564e+11, -2.90333364e+11, -2.84606165e+11, -2.01661559e+11,
+       -2.08166125e+11, -2.43906480e+11, -2.03682551e+11, -2.13891254e+11,
+       -2.03272133e+11, -2.15060612e+11, -1.76256328e+11, -2.65188039e+11,
+       -2.58299124e+11, -2.22489058e+11, -2.14041277e+11, -2.87775000e+11]), 
+'split2_test_score': array([-2.54908379e+11, -2.52001314e+11, -2.02028317e+11, -2.43426924e+11,
+       -2.43216289e+11, -2.38302003e+11, -1.94144139e+11, -2.12356134e+11,
+       -3.31647823e+11, -2.69647150e+11, -1.91273939e+11, -2.47125421e+11,
+       -2.09437794e+11, -2.39049938e+11, -2.35428485e+11, -2.10230151e+11,
+       -2.13998102e+11, -2.75352748e+11, -2.18956122e+11, -2.39194934e+11,
+       -2.16889989e+11, -2.34360922e+11, -2.03734488e+11, -2.09139276e+11,
+       -2.36551575e+11, -2.24432356e+11, -2.59839183e+11, -2.67756763e+11,
+       -2.20623362e+11, -2.06906955e+11, -2.12738373e+11, -2.32655565e+11,
+       -2.82237613e+11, -2.77538242e+11, -2.45323367e+11, -2.03990068e+11,
+       -2.79733546e+11, -1.89899473e+11, -1.83879781e+11, -2.48540045e+11,
+       -2.54432540e+11, -3.30575191e+11, -2.85559882e+11, -2.17572818e+11,
+       -1.81608932e+11, -2.61075469e+11, -2.08306599e+11, -2.77018356e+11,
+       -2.34227291e+11, -1.94325337e+11, -2.84066306e+11, -2.60802683e+11,
+       -2.59296944e+11, -1.83782112e+11, -2.60247669e+11, -2.17779954e+11,
+       -2.16441867e+11, -2.59468501e+11, -2.61344376e+11, -2.18103259e+11,
+       -2.54611060e+11, -2.54556434e+11, -2.31186253e+11, -2.68445384e+11,
+       -1.87419187e+11, -2.59562038e+11, -2.64330466e+11, -2.98858944e+11,
+       -2.13998102e+11, -2.73999249e+11, -2.78239673e+11, -3.30626243e+11,
+       -2.49965485e+11, -2.74629060e+11, -2.08030250e+11, -2.39613253e+11,
+       -3.12490887e+11, -2.24861231e+11, -2.66554272e+11, -2.34029423e+11,
+       -2.22366966e+11, -2.42199360e+11, -2.45002722e+11, -2.76296961e+11,
+       -2.19426929e+11, -2.26112516e+11, -2.29710903e+11, -1.85840052e+11,
+       -1.92336876e+11, -2.79380744e+11, -2.06622448e+11, -2.03268982e+11,
+       -1.99466539e+11, -2.48799353e+11, -2.20753468e+11, -2.85781195e+11,
+       -2.01295371e+11, -2.09330191e+11, -2.29753454e+11, -2.48964449e+11]), 
+'split3_test_score': array([-3.14287833e+11, -8.30585713e+10, -1.41024935e+11, -7.66901101e+10,
+       -3.20772849e+11, -8.55153861e+10, -6.65542687e+10, -6.48641013e+10,
+       -3.26065599e+11, -3.13093592e+11, -6.22140180e+10, -8.26375991e+10,
+       -7.13977549e+10, -7.18334636e+10, -7.20757818e+10, -7.39845960e+10,
+       -6.85664129e+10, -8.79767973e+10, -7.22710995e+10, -7.23892180e+10,
+       -7.29932735e+10, -8.53342915e+10, -6.48138559e+10, -6.58951194e+10,
+       -8.16068329e+10, -8.94522268e+10, -3.15604270e+11, -3.17049302e+11,
+       -6.88856598e+10, -7.54902015e+10, -7.32735932e+10, -7.08711936e+10,
+       -3.16807020e+11, -8.58582206e+10, -7.81028592e+10, -6.14091842e+10,
+       -1.03173298e+11, -6.22619311e+10, -6.66039055e+10, -8.76881503e+10,
+       -3.15276431e+11, -3.18883991e+11, -3.63789024e+11, -7.74739674e+10,
+       -6.36347470e+10, -8.53520913e+10, -5.82205743e+10, -1.01566383e+11,
+       -7.27104079e+10, -5.92859760e+10, -3.19066895e+11, -3.61361822e+11,
+       -8.13792815e+10, -5.34296175e+10, -3.15611578e+11, -7.77216522e+10,
+       -7.08019324e+10, -8.44731497e+10, -8.34807488e+10, -7.43778333e+10,
+       -3.14837115e+11, -9.15368863e+10, -6.83215771e+10, -8.06464016e+10,
+       -6.11810543e+10, -3.07795552e+11, -3.15876743e+11, -1.14332711e+11,
+       -6.85664129e+10, -8.13832597e+10, -8.89074062e+10, -3.19100338e+11,
+       -3.21562422e+11, -8.47699354e+10, -7.21026375e+10, -8.67902273e+10,
+       -1.07077380e+11, -6.02596240e+10, -1.51691387e+11, -7.99831696e+10,
+       -7.47990777e+10, -8.04919722e+10, -8.17508793e+10, -8.84965011e+10,
+       -7.39815065e+10, -8.46998522e+10, -8.36090461e+10, -5.86390692e+10,
+       -6.16239662e+10, -7.97936491e+10, -7.75366891e+10, -7.26745874e+10,
+       -6.24979862e+10, -7.53507525e+10, -7.34519177e+10, -3.17628365e+11,
+       -8.32722207e+10, -7.60200941e+10, -7.22209837e+10, -8.86525318e+10]), 
+'split4_test_score': array([-1.34449804e+11, -8.52635149e+10, -1.20520800e+11, -8.36587657e+10,
+       -1.01175550e+11, -7.58164560e+10, -6.11110987e+10, -7.12854769e+10,
+       -1.21410125e+11, -1.08716837e+11, -5.57106520e+10, -7.84730154e+10,
+       -7.98996769e+10, -7.97862263e+10, -8.42209766e+10, -5.41146015e+10,
+       -6.63586023e+10, -8.41800916e+10, -7.79555276e+10, -8.03350995e+10,
+       -7.21000619e+10, -7.59826548e+10, -7.14681198e+10, -7.42608943e+10,
+       -7.82914274e+10, -8.05449485e+10, -1.22647625e+11, -1.03094411e+11,
+       -6.29080240e+10, -5.22041585e+10, -5.89087253e+10, -7.67352435e+10,
+       -1.25522758e+11, -8.88965881e+10, -8.59817186e+10, -4.89227198e+10,
+       -9.58769215e+10, -4.69564190e+10, -5.09066469e+10, -8.52099292e+10,
+       -1.34662210e+11, -1.20653488e+11, -1.22579001e+11, -6.61295561e+10,
+       -5.27759332e+10, -8.66872077e+10, -7.36802389e+10, -9.44589518e+10,
+       -7.85535489e+10, -5.27530167e+10, -1.24803534e+11, -1.10660903e+11,
+       -8.84971696e+10, -5.75359558e+10, -1.22617138e+11, -6.95416530e+10,
+       -5.76106793e+10, -8.35799939e+10, -8.39400644e+10, -7.75883140e+10,
+       -1.34582950e+11, -7.72598089e+10, -7.98213610e+10, -8.64559676e+10,
+       -5.11722033e+10, -1.02425472e+11, -1.10367292e+11, -1.03525738e+11,
+       -6.63586023e+10, -8.76909520e+10, -8.49699695e+10, -1.20653049e+11,
+       -1.10395689e+11, -8.53091666e+10, -6.41714829e+10, -7.61729515e+10,
+       -1.00118552e+11, -9.41218682e+10, -9.72673697e+10, -7.90716553e+10,
+       -5.92833941e+10, -8.13127579e+10, -8.38565830e+10, -8.44051715e+10,
+       -5.76358658e+10, -7.12969966e+10, -7.68716244e+10, -4.93913613e+10,
+       -5.54735829e+10, -8.78325220e+10, -5.48766801e+10, -6.42940182e+10,
+       -5.36864163e+10, -8.18632944e+10, -6.39417252e+10, -1.25448417e+11,
+       -4.88893385e+10, -4.32986524e+10, -7.38341287e+10, -7.98583326e+10]), 
+'mean_test_score': array([-2.21139575e+11, -1.34805944e+11, -1.64485116e+11, -1.37933511e+11,
+       -2.16323434e+11, -1.46897271e+11, -1.15775603e+11, -1.14335979e+11,
+       -2.67771417e+11, -2.28061992e+11, -1.12955143e+11, -1.50589393e+11,
+       -1.14266399e+11, -1.21968322e+11, -1.24184735e+11, -1.28574964e+11,
+       -1.13658480e+11, -1.46291860e+11, -1.26094712e+11, -1.23850499e+11,
+       -1.14416772e+11, -1.45860647e+11, -1.11074832e+11, -1.14679143e+11,
+       -1.45325479e+11, -1.48656378e+11, -2.28714099e+11, -2.27666792e+11,
+       -1.16785715e+11, -1.28250461e+11, -1.33704903e+11, -1.29968185e+11,
+       -2.55953993e+11, -1.48819460e+11, -1.42351970e+11, -1.14801983e+11,
+       -1.71846534e+11, -1.12909665e+11, -1.11405778e+11, -1.54464823e+11,
+       -2.21289790e+11, -2.65683382e+11, -2.57483806e+11, -1.34295135e+11,
+       -1.11690989e+11, -1.39447917e+11, -1.11446658e+11, -1.71249462e+11,
+       -1.19956166e+11, -1.12527375e+11, -2.57599512e+11, -2.30520839e+11,
+       -1.37677257e+11, -1.16622697e+11, -2.28770811e+11, -1.38274346e+11,
+       -1.11567142e+11, -1.36325695e+11, -1.36473754e+11, -1.17291063e+11,
+       -2.21208296e+11, -1.56389943e+11, -1.19255818e+11, -1.46498126e+11,
+       -1.11785652e+11, -2.23924120e+11, -2.25644256e+11, -1.85787333e+11,
+       -1.13658480e+11, -1.47565388e+11, -1.47598046e+11, -2.65740147e+11,
+       -2.19692199e+11, -1.44884084e+11, -1.29951401e+11, -1.44013191e+11,
+       -1.98977748e+11, -1.34621858e+11, -1.63105632e+11, -1.45478470e+11,
+       -1.35850501e+11, -1.35998393e+11, -1.44643157e+11, -1.46707675e+11,
+       -1.13037960e+11, -1.44382425e+11, -1.44518819e+11, -1.08431394e+11,
+       -1.12488853e+11, -1.48398699e+11, -1.18252001e+11, -1.20013676e+11,
+       -1.13654303e+11, -1.36054783e+11, -1.13820645e+11, -2.56497333e+11,
+       -1.28314823e+11, -1.23102806e+11, -1.28661285e+11, -1.51667644e+11]), 
+'std_test_score': array([6.17593374e+10, 7.93857628e+10, 7.05886838e+10, 8.13108258e+10,
+       7.99129529e+10, 9.57095088e+10, 7.20550702e+10, 7.11727647e+10,
+       7.65458930e+10, 8.06045048e+10, 7.20384233e+10, 9.97599009e+10,
+       6.66099487e+10, 7.44415851e+10, 7.41830234e+10, 8.83655640e+10,
+       7.11397439e+10, 9.03385278e+10, 7.32319304e+10, 7.53259313e+10,
+       6.91357605e+10, 9.54396642e+10, 6.69905335e+10, 6.97059720e+10,
+       9.44102523e+10, 9.62873227e+10, 6.33713194e+10, 8.67587299e+10,
+       7.51074275e+10, 8.87977844e+10, 9.41334549e+10, 7.53297130e+10,
+       6.72069189e+10, 9.20570590e+10, 8.39713732e+10, 7.43845484e+10,
+       1.07658974e+11, 7.48346518e+10, 7.19494878e+10, 9.99686693e+10,
+       6.19379393e+10, 7.55592944e+10, 8.10642092e+10, 8.90190376e+10,
+       7.22555824e+10, 8.35954648e+10, 6.77870850e+10, 1.07256977e+11,
+       7.30173242e+10, 7.31205728e+10, 6.82025833e+10, 9.15169894e+10,
+       8.22530440e+10, 7.39492778e+10, 6.34273744e+10, 9.26177956e+10,
+       7.17752562e+10, 8.20096483e+10, 8.23565879e+10, 6.90665213e+10,
+       6.18484282e+10, 1.02238298e+11, 7.29850112e+10, 9.18963572e+10,
+       7.12253279e+10, 8.22289364e+10, 7.46847904e+10, 1.17464204e+11,
+       7.11397439e+10, 9.24465256e+10, 9.12914963e+10, 7.55996490e+10,
+       7.85887824e+10, 9.01639370e+10, 8.77891550e+10, 9.08565009e+10,
+       1.25176562e+11, 7.08494780e+10, 7.81024831e+10, 9.28236056e+10,
+       9.37056172e+10, 8.03667175e+10, 8.60091523e+10, 9.07746535e+10,
+       7.22595026e+10, 9.58054868e+10, 9.43647537e+10, 6.99557061e+10,
+       7.20328947e+10, 9.39402539e+10, 7.16120352e+10, 7.29069179e+10,
+       7.17543801e+10, 7.93493893e+10, 7.17084297e+10, 6.76228803e+10,
+       8.56983828e+10, 7.66121494e+10, 7.66245938e+10, 9.67856667e+10]), 
+'rank_test_score': array([ 84,  44,  77,  51,  82,  66,  22,  18, 100,  90,  11,  72,  17,
+        30,  33,  37,  14,  63,  34,  32,  19,  62,   2,  20,  60,  70,
+        91,  89,  24,  35,  41,  40,  94,  71,  54,  21,  79,  10,   3,
+        74,  86,  98,  96,  42,   6,  53,   4,  78,  28,   9,  97,  93,
+        50,  23,  92,  52,   5,  48,  49,  25,  85,  75,  27,  64,   7,
+        87,  88,  80,  14,  67,  68,  99,  83,  59,  39,  55,  81,  43,
+        76,  61,  45,  46,  58,  65,  12,  56,  57,   1,   8,  69,  26,
+        29,  13,  47,  16,  95,  36,  31,  38,  73]), 
+'split0_train_score': array([-4.31283796e+10, -6.99027347e+10, -5.79901547e+10, -5.94770920e+10,
+       -2.56416821e+09, -6.01505385e+10, -2.48241227e+10, -3.39980342e+10,
+       -1.01888095e+11, -1.33300295e+10, -1.51567306e+10, -6.88187502e+10,
+       -4.39181184e+10, -5.55731011e+10, -6.37041072e+10, -2.55573528e+10,
+       -3.17814115e+10, -7.44241461e+10, -4.31654890e+10, -5.71216246e+10,
+       -3.59856697e+10, -6.04284814e+10, -3.37291013e+10, -3.34975186e+10,
+       -6.25596120e+10, -5.16075294e+10, -6.13817363e+10, -3.02682821e+10,
+       -2.81126932e+10, -2.01076391e+10, -3.43868504e+10, -4.47725984e+10,
+       -9.43011356e+10, -8.03246919e+10, -5.92256036e+10, -1.37646792e+10,
+       -9.78113240e+10, -1.68530479e+09, -7.43372204e+09, -7.15329699e+10,
+       -4.31283796e+10, -1.00971889e+11, -6.34493141e+10, -4.12785238e+10,
+       -7.34665290e+09, -7.20465100e+10, -3.44378853e+10, -8.82141098e+10,
+       -5.43796541e+10, -5.05965656e+09, -9.77597742e+10, -2.75826601e+10,
+       -7.13627321e+10, -1.60770854e+10, -6.13817363e+10, -4.65366406e+10,
+       -2.60322211e+10, -6.92265675e+10, -6.75620865e+10, -4.28203574e+10,
+       -4.31283796e+10, -7.66859127e+10, -5.61644355e+10, -7.55732653e+10,
+       -3.79857255e+08, -1.45236255e+10, -3.76429326e+10, -1.05026069e+11,
+       -3.17814115e+10, -7.69134401e+10, -7.90746601e+10, -1.00971889e+11,
+       -5.39898866e+09, -7.71762901e+10, -3.37398041e+10, -6.09535260e+10,
+       -1.00557506e+11, -3.18005121e+10, -8.44339720e+10, -5.80917797e+10,
+       -3.42621188e+10, -5.73069601e+10, -6.01841194e+10, -7.77373836e+10,
+       -2.63557323e+10, -5.21132384e+10, -6.02846596e+10, -4.72892707e+09,
+       -1.14676705e+10, -8.16996301e+10, -2.80282834e+10, -3.13266812e+10,
+       -1.33588015e+10, -5.78503476e+10, -3.08334457e+10, -9.66073198e+10,
+       -2.28539223e+10, -1.48181791e+10, -4.62489881e+10, -7.18216177e+10]), 
+'split1_train_score': array([-4.25865556e+10, -7.33873865e+10, -3.75345881e+10, -5.21908055e+10,
+       -1.16724294e+09, -6.15987206e+10, -2.47477053e+10, -3.50158902e+10,
+       -6.42478066e+10, -1.15849069e+10, -1.62405261e+10, -6.62161230e+10,
+       -4.31039814e+10, -5.09410832e+10, -5.69468652e+10, -2.50985622e+10,
+       -3.28108567e+10, -8.90590672e+10, -4.01462553e+10, -5.27470667e+10,
+       -3.72398735e+10, -5.98261033e+10, -3.35726126e+10, -3.35218599e+10,
+       -6.21258757e+10, -4.80791638e+10, -4.77538268e+10, -1.81091243e+10,
+       -3.07115394e+10, -1.79527094e+10, -3.78636369e+10, -4.17988737e+10,
+       -5.83494735e+10, -9.73353686e+10, -5.27867095e+10, -2.60230411e+10,
+       -9.61398683e+10, -1.77015593e+09, -7.38639669e+09, -7.10194910e+10,
+       -4.25865556e+10, -6.35014443e+10, -4.97949506e+10, -4.24929443e+10,
+       -7.24066589e+09, -8.07705640e+10, -3.25568667e+10, -8.70139885e+10,
+       -5.24753286e+10, -7.54505038e+09, -6.30140507e+10, -1.39532204e+10,
+       -7.87413452e+10, -1.68972510e+10, -4.77538268e+10, -4.44120231e+10,
+       -2.99306219e+10, -7.54951533e+10, -7.33545313e+10, -4.51241234e+10,
+       -4.25865556e+10, -7.58288232e+10, -5.42244109e+10, -9.20948969e+10,
+       -4.45401597e+08, -1.35727323e+10, -2.37957258e+10, -1.05976605e+11,
+       -3.28108567e+10, -9.32945837e+10, -9.51070663e+10, -6.35014443e+10,
+       -6.39187776e+09, -9.10221730e+10, -3.00993880e+10, -6.15226063e+10,
+       -8.21596520e+10, -3.02114944e+10, -9.52167244e+10, -5.91001628e+10,
+       -3.65572408e+10, -4.99585888e+10, -5.29874349e+10, -9.32909596e+10,
+       -2.99172000e+10, -4.39220260e+10, -5.95539399e+10, -7.69889794e+09,
+       -1.21595508e+10, -9.90049623e+10, -3.46548056e+10, -3.40075065e+10,
+       -2.49104596e+10, -5.13350802e+10, -3.36062111e+10, -6.06977883e+10,
+       -1.91559020e+10, -2.60315745e+10, -4.49293756e+10, -7.04450840e+10]), 
+'split2_train_score': array([-2.26118813e+10, -5.21172734e+10, -3.88144887e+10, -4.17328067e+10,
+       -6.02114592e+08, -4.69319213e+10, -1.55031925e+10, -2.33289968e+10,
+       -6.25773729e+10, -5.20106634e+09, -8.14331119e+09, -5.32782215e+10,
+       -3.07384797e+10, -4.14597039e+10, -4.34812807e+10, -2.16736408e+10,
+       -2.44366938e+10, -5.86533607e+10, -2.96708996e+10, -4.16909681e+10,
+       -2.51688994e+10, -4.63374318e+10, -2.43332899e+10, -2.31490009e+10,
+       -4.74565162e+10, -3.94043267e+10, -2.79285819e+10, -1.60718558e+10,
+       -2.33674579e+10, -1.68824006e+10, -2.80122940e+10, -3.11598078e+10,
+       -4.43901975e+10, -6.12797191e+10, -4.11666455e+10, -1.43989429e+10,
+       -7.66535484e+10, -1.48420895e+09, -2.18048423e+09, -5.53590527e+10,
+       -2.26118813e+10, -6.22372057e+10, -4.35163991e+10, -3.24557382e+10,
+       -2.22908398e+09, -5.37288304e+10, -2.32557547e+10, -6.77486253e+10,
+       -3.94586034e+10, -4.25166364e+09, -4.51408252e+10, -1.52777220e+10,
+       -5.29785498e+10, -7.79820127e+09, -2.79285819e+10, -3.49854982e+10,
+       -2.33398239e+10, -5.20038549e+10, -5.18802511e+10, -3.01955931e+10,
+       -2.26118813e+10, -5.89834170e+10, -3.95386569e+10, -5.80233413e+10,
+       -1.40858588e+08, -7.66022284e+09, -1.74490146e+10, -8.42565679e+10,
+       -2.44366938e+10, -5.90484054e+10, -6.02261833e+10, -6.22372057e+10,
+       -5.31889389e+09, -5.87610405e+10, -2.29592365e+10, -4.76669268e+10,
+       -7.44225353e+10, -2.10638402e+10, -7.67865441e+10, -4.65891556e+10,
+       -3.00954261e+10, -3.91998480e+10, -4.19534221e+10, -5.92032569e+10,
+       -2.34125121e+10, -3.37556228e+10, -4.63467972e+10, -4.15802273e+09,
+       -6.61903103e+09, -6.09533705e+10, -1.97259506e+10, -2.14588397e+10,
+       -1.34361689e+10, -4.16192501e+10, -2.43025902e+10, -4.42586216e+10,
+       -1.68677405e+10, -1.43067406e+10, -3.33931922e+10, -5.44453279e+10]), 
+'split3_train_score': array([-4.03963919e+10, -7.76311143e+10, -5.04231680e+10, -6.50725204e+10,
+       -1.14167262e+09, -6.69131228e+10, -2.79805363e+10, -3.47429962e+10,
+       -1.09166083e+11, -1.51762193e+10, -1.55685939e+10, -7.37783366e+10,
+       -4.59807070e+10, -6.15549285e+10, -6.73717227e+10, -2.73699169e+10,
+       -3.54647944e+10, -8.29738767e+10, -4.51819646e+10, -5.99677745e+10,
+       -3.79827040e+10, -6.79224003e+10, -3.71019337e+10, -3.59102002e+10,
+       -6.95451931e+10, -5.60370535e+10, -6.04721407e+10, -2.24444581e+10,
+       -2.96065206e+10, -2.03261007e+10, -3.53779992e+10, -5.04798751e+10,
+       -1.04511085e+11, -8.50564185e+10, -6.50621219e+10, -2.15083246e+10,
+       -1.12227960e+11, -2.80111091e+09, -7.78236994e+09, -8.01866731e+10,
+       -4.03963919e+10, -1.08219429e+11, -5.38199597e+10, -4.57588652e+10,
+       -7.65875442e+09, -7.88949447e+10, -3.80335160e+10, -9.89482398e+10,
+       -5.84166520e+10, -4.96881624e+09, -1.07370609e+11, -1.62831734e+10,
+       -7.64507934e+10, -1.60173811e+10, -6.04721407e+10, -4.96739690e+10,
+       -3.01474976e+10, -7.82023420e+10, -7.65451080e+10, -4.50617684e+10,
+       -4.03963919e+10, -8.40788248e+10, -5.83955509e+10, -8.00346271e+10,
+       -2.61867167e+08, -1.64865202e+10, -2.52685719e+10, -1.21914550e+11,
+       -3.54647944e+10, -8.16894944e+10, -8.75523179e+10, -1.08219429e+11,
+       -7.14487233e+09, -8.49459807e+10, -3.24570481e+10, -6.55481095e+10,
+       -1.06302909e+11, -2.87430995e+10, -1.09485909e+11, -6.48247287e+10,
+       -3.59573744e+10, -6.48535840e+10, -6.52564260e+10, -8.59392029e+10,
+       -3.01409826e+10, -5.07540360e+10, -6.66022712e+10, -4.98719342e+09,
+       -1.22091594e+10, -8.49141125e+10, -3.36793303e+10, -3.75378973e+10,
+       -2.10226291e+10, -6.35191477e+10, -3.37727023e+10, -1.06389035e+11,
+       -2.19833367e+10, -2.36707295e+10, -5.47664513e+10, -8.28026770e+10]), 
+'split4_train_score': array([-4.36181188e+10, -6.51536864e+10, -4.31506775e+10, -6.26419929e+10,
+       -7.31175484e+08, -6.00244649e+10, -2.56693784e+10, -3.49641220e+10,
+       -7.38506846e+10, -1.11688069e+10, -1.64566551e+10, -6.74302472e+10,
+       -4.34900633e+10, -5.34517733e+10, -5.98799832e+10, -2.52110138e+10,
+       -3.16530810e+10, -6.98290784e+10, -4.18362275e+10, -5.27475451e+10,
+       -3.58415581e+10, -6.12469963e+10, -3.50853358e+10, -3.54695645e+10,
+       -6.19613739e+10, -5.55178786e+10, -5.00407320e+10, -2.44041312e+10,
+       -2.48523266e+10, -1.98177182e+10, -3.28804668e+10, -4.40547862e+10,
+       -6.78943696e+10, -7.24432369e+10, -6.34326134e+10, -1.32422727e+10,
+       -9.31079766e+10, -1.37016821e+09, -7.44979831e+09, -7.37701602e+10,
+       -4.36181188e+10, -7.18991136e+10, -6.61701539e+10, -4.25690864e+10,
+       -7.38587821e+09, -6.66807218e+10, -3.47605244e+10, -8.70139453e+10,
+       -5.34382416e+10, -3.60737217e+09, -7.09346221e+10, -1.73567653e+10,
+       -6.60505922e+10, -1.76221345e+10, -5.00407320e+10, -4.74051940e+10,
+       -2.52474683e+10, -6.50006535e+10, -6.29690092e+10, -4.24686996e+10,
+       -4.36181188e+10, -7.62711907e+10, -5.41066190e+10, -6.84013568e+10,
+       -2.18864328e+08, -1.40275945e+10, -3.11674417e+10, -1.01274271e+11,
+       -3.16530810e+10, -6.89970943e+10, -7.45477748e+10, -7.18991136e+10,
+       -5.67751394e+09, -7.27274203e+10, -3.29996418e+10, -6.06485450e+10,
+       -9.39402866e+10, -3.41580892e+10, -7.23168552e+10, -5.96103147e+10,
+       -3.22131437e+10, -5.92263984e+10, -6.23841320e+10, -7.28265346e+10,
+       -2.48306685e+10, -4.86930791e+10, -6.12079578e+10, -3.59595680e+09,
+       -1.12225687e+10, -7.31259680e+10, -2.98670741e+10, -3.30480262e+10,
+       -1.37992321e+10, -5.95218389e+10, -3.01147286e+10, -6.97665304e+10,
+       -2.00772227e+10, -1.45960698e+10, -4.77453786e+10, -7.13264914e+10]), 
+'mean_train_score': array([-3.84682655e+10, -6.76384391e+10, -4.55826154e+10, -5.62230435e+10,
+       -1.24127477e+09, -5.91237536e+10, -2.37449870e+10, -3.24100079e+10,
+       -8.23460085e+10, -1.12922058e+10, -1.43131634e+10, -6.59043357e+10,
+       -4.14462700e+10, -5.25961180e+10, -5.82767918e+10, -2.49820973e+10,
+       -3.12293675e+10, -7.49879058e+10, -4.00001672e+10, -5.28549958e+10,
+       -3.44437410e+10, -5.91522826e+10, -3.27644547e+10, -3.23096288e+10,
+       -6.07297142e+10, -5.01291904e+10, -4.95154035e+10, -2.22595703e+10,
+       -2.73301075e+10, -1.90173136e+10, -3.37042495e+10, -4.24531882e+10,
+       -7.38892522e+10, -7.92878870e+10, -5.63347388e+10, -1.77874521e+10,
+       -9.51881355e+10, -1.82218976e+09, -6.44655424e+09, -7.03736694e+10,
+       -3.84682655e+10, -8.13658165e+10, -5.53501555e+10, -4.09110316e+10,
+       -6.37220708e+09, -7.04243142e+10, -3.26089094e+10, -8.57877817e+10,
+       -5.16336960e+10, -5.08651180e+09, -7.68439763e+10, -1.80907082e+10,
+       -6.91168025e+10, -1.48824107e+10, -4.95154035e+10, -4.46026650e+10,
+       -2.69395266e+10, -6.79857143e+10, -6.64621972e+10, -4.11341084e+10,
+       -3.84682655e+10, -7.43696337e+10, -5.24859347e+10, -7.48254975e+10,
+       -2.89369787e+08, -1.32541390e+10, -2.70647373e+10, -1.03689613e+11,
+       -3.12293675e+10, -7.59886036e+10, -7.93016005e+10, -8.13658165e+10,
+       -5.98642932e+09, -7.69265809e+10, -3.04510237e+10, -5.92679427e+10,
+       -9.14765780e+10, -2.91954071e+10, -8.76480008e+10, -5.76432283e+10,
+       -3.38170608e+10, -5.41090759e+10, -5.65531069e+10, -7.77994675e+10,
+       -2.69314191e+10, -4.58476004e+10, -5.87991251e+10, -5.03379959e+09,
+       -1.07355961e+10, -7.99396087e+10, -2.91910888e+10, -3.14757902e+10,
+       -1.73054582e+10, -5.47691329e+10, -3.05259356e+10, -7.55438591e+10,
+       -2.01876249e+10, -1.86846587e+10, -4.54166772e+10, -7.01682396e+10]), 
+'std_train_score': array([8.00425582e+09, 8.77623576e+09, 7.66642793e+09, 8.44192974e+09,
+       6.97735676e+08, 6.59251208e+09, 4.28346388e+09, 4.55507508e+09,
+       1.94510871e+10, 3.35979665e+09, 3.11974586e+09, 6.81671593e+09,
+       5.44523689e+09, 6.58200151e+09, 8.19047738e+09, 1.84631809e+09,
+       3.66236672e+09, 1.05406072e+10, 5.42137466e+09, 6.22020020e+09,
+       4.70524683e+09, 7.03712878e+09, 4.40155462e+09, 4.68501864e+09,
+       7.22087573e+09, 6.08854012e+09, 1.20849488e+10, 4.98571563e+09,
+       2.79537361e+09, 1.35894199e+09, 3.27551097e+09, 6.32994552e+09,
+       2.23694398e+10, 1.20930216e+10, 8.68980671e+09, 5.09888556e+09,
+       1.13666225e+10, 5.09565726e+08, 2.13766506e+09, 8.18573108e+09,
+       8.00425582e+09, 1.93916096e+10, 8.43692274e+09, 4.48062767e+09,
+       2.07614872e+09, 9.73839461e+09, 4.99770284e+09, 1.00747501e+10,
+       6.41477026e+09, 1.33744614e+09, 2.28062404e+10, 4.87718568e+09,
+       9.17941492e+09, 3.59074078e+09, 1.20849488e+10, 5.09585706e+09,
+       2.67887489e+09, 9.23732962e+09, 8.66273204e+09, 5.57893214e+09,
+       8.00425582e+09, 8.27181186e+09, 6.65936710e+09, 1.13974417e+10,
+       1.09833417e+08, 2.96821553e+09, 6.85718846e+09, 1.20219955e+10,
+       3.66236672e+09, 1.15646352e+10, 1.18693638e+10, 1.93916096e+10,
+       6.91736573e+08, 1.10515036e+10, 3.93919251e+09, 6.06390677e+09,
+       1.17132293e+10, 4.44464132e+09, 1.33979479e+10, 5.99932923e+09,
+       2.39627714e+09, 8.84725410e+09, 8.35221745e+09, 1.16343851e+10,
+       2.69605118e+09, 6.65359809e+09, 6.70117291e+09, 1.41649183e+09,
+       2.09371531e+09, 1.26351416e+10, 5.31778954e+09, 5.40355786e+09,
+       4.78528004e+09, 7.65972576e+09, 3.43579022e+09, 2.29244137e+10,
+       2.11811220e+09, 5.09255270e+09, 6.90413675e+09, 9.06632022e+09])}
+	Mean Absolute Error : 90667.42
+	Mean Squared Error : 44370872638.83
+	테스트 셋 예측 정확도 : 89.15 %.
+무작위 서치를 통한 튜닝
+Improvement of -0.52%.
+
+Process finished with exit code 0

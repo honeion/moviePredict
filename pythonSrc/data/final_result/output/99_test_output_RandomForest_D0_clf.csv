@@ -1,0 +1,26 @@
+,index,prediction,realValue,accuracy
+0,0,01_50up 100down,06_500up 600down,False
+1,1,00_50down,06_500up 600down,False
+2,2,01_50up 100down,04_300up 400down,False
+3,3,02_100up 200down,04_300up 400down,False
+4,4,01_50up 100down,02_100up 200down,False
+5,5,00_50down,02_100up 200down,False
+6,6,00_50down,01_50up 100down,False
+7,7,02_100up 200down,04_300up 400down,False
+8,8,00_50down,01_50up 100down,False
+9,9,00_50down,00_50down,True
+10,10,00_50down,00_50down,True
+11,11,00_50down,00_50down,True
+12,12,00_50down,00_50down,True
+13,13,00_50down,00_50down,True
+14,14,00_50down,00_50down,True
+15,15,02_100up 200down,00_50down,False
+16,16,00_50down,00_50down,True
+17,17,00_50down,00_50down,True
+18,18,00_50down,00_50down,True
+19,19,00_50down,00_50down,True
+20,20,00_50down,00_50down,True
+21,21,00_50down,00_50down,True
+22,22,00_50down,00_50down,True
+23,23,00_50down,00_50down,True
+24,24,00_50down,00_50down,True

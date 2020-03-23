@@ -1,0 +1,219 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    style.
+      #loader {
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #3498db;
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+      }
+      /* Safari */
+      @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+      }
+      @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+      }
+    title 덕후의 예감 - 영화흥행예측
+    // Bootstrap core CSS
+    link(href='vendor/bootstrap/css/bootstrap.min.css', rel='stylesheet')
+    // Custom styles for this template
+    link(href='css/modern-business.css', rel='stylesheet')
+    style(type='text/css').
+      .name-group {
+      width: 30%;
+      text-align: right;
+      margin-right: 3em;
+      }
+      .input-group {
+      margin-bottom: 2px;
+      }
+      .comboBox {
+      margin-left: 10px;
+      width: auto;
+      width: 13em;
+      }
+      .comboBox-2 {
+      width: 100%;
+      height: 100%;
+      }
+      .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transform: -webkit-translate(-50%, -50%);
+      transform: -moz-translate(-50%, -50%);
+      transform: -ms-translate(-50%, -50%);
+      color:darkred;
+      }
+  body
+    // Navigation
+    nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+      .container
+        a.navbar-brand(href='home') 영화흥행예측
+        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link(href='about') About
+            li.nav-item
+              a.nav-link(href='newest') Newest
+            li.nav-item
+              a.nav-link.active(href='prediction') Prediction
+    // Page Content
+    .container(style='width:80%', align='center')
+      // Page Heading/Breadcrumbs
+      h1.mt-4.mb-3(align='center', style='font-family: 문체부 훈민정음체')
+        | 영화 예측해보기
+      // Search Widget
+      #loader.centered(style='display:none;')
+      .card.mb-4(style='width:80%; font-family: 휴먼모음T', align='left', id='inputBox')
+        .card-body(style='width: 80%; margin-left: auto; margin-right: auto; display: block;')
+          form(action='/predictionStart', method='post', id='startPrediction')
+            .input-group
+              .name-group
+                h5 영화제목 : 
+              input.form-control(type='text ', placeholder='ex) 신과 함께: 인과 연 ', style='margin-left:10px ', name='movieNm')
+            .input-group
+              .name-group
+                h5 감독 : 
+              input.form-control(type='text ', placeholder='ex) 김용화 ', style='margin-left:10px ', name='director')
+            .input-group
+              .name-group
+                h5 배우 : 
+              div
+                input.form-control(type='text ', placeholder='ex) 하정우 ', style='margin-left:10px', name='actor1')
+                input.form-control(type='text ', placeholder='ex) 주지훈 ', style='margin-left:10px', name='actor2')
+                input.form-control(type='text ', placeholder='ex) 김향기 ', style='margin-left:10px', name='actor3')
+                input.form-control(type='text ', placeholder='ex) 마동석 ', style='margin-left:10px', name='actor4')
+                input.form-control(type='text ', placeholder='ex) 김동우 ', style='margin-left:10px', name='actor5')
+                input.form-control(type='text ', placeholder='ex) 조한철 ', style='margin-left:10px', name='actor6')
+            .input-group
+              .name-group
+                h5 개봉연도 : 
+              input.form-control(type='text ', placeholder='ex) 2018 ', style='margin-left:10px ', name='year')
+            .input-group
+              .name-group
+                h5 개봉월 : 
+              .comboBox
+                select.comboBox-2(name='month')
+                  option(value='01') 01
+                  option(value='02') 02
+                  option(value='03') 03
+                  option(value='04') 04
+                  option(value='05') 05
+                  option(value='06') 06
+                  option(value='07') 07
+                  option(value='08') 08
+                  option(value='09') 09
+                  option(value='10') 10
+                  option(value='11') 11
+                  option(value='12') 12
+            .input-group
+              .name-group
+                h5 장르 : 
+              // <input type="text " class="form-control " placeholder="ex) 판타지 " style="margin-left:10px ">
+              .comboBox
+                select.comboBox-2(name='genre')
+                  option(value='사극') 사극
+                  option(value='드라마') 드라마
+                  option(value='판타지') 판타지
+                  option(value='SF') SF
+                  option(value='액션') 액션
+                  option(value='코미디') 코미디
+                  option(value='어드벤처') 어드벤처
+                  option(value='사극') 사극
+                  option(value='범죄') 범죄
+                  option(value='애니메이션') 애니메이션
+                  option(value='전쟁') 전쟁
+                  option(value='미스터리') 미스터리
+                  option(value='서부극(웨스턴)') 서부극(웨스턴)
+                  option(value='멜로/로맨스') 멜로/로맨스
+                  option(value='가족') 가족
+                  option(value='스릴러') 스릴러
+                  option(value='다큐멘터리') 다큐멘터리
+                  option(value='공포(호러)') 공포(호러)
+                  option(value='뮤지컬') 뮤지컬
+                  option(value='뮤지컬') 공연
+            .input-group
+              .name-group
+                h5 상영시간 : 
+              .comboBox
+                select.comboBox-2(name='showTm')
+                  option(value='90분 이하') 90분 이하
+                  option(value='90분 ~ 120분') 90분 ~ 120분
+                  option(value='120분 ~ 150분') 120분 ~ 150분
+                  option(value='150분 이상') 150분 이상
+            .input-group
+              .name-group
+                h5 상영등급 : 
+              // <input type="text " class="form-control " placeholder="ex) 전체관람가, 12세이상관람가, 청소년관람불가 " style="margin-left:10px ">
+              .comboBox
+                select.comboBox-2(name='grade')
+                  option(value='전체관람가') 전체관람가
+                  option(value='12세이상관람가') 12세이상관람가
+                  option(value='15세이상관람가') 15세이상관람가
+                  option(value='청소년관람불가') 청소년관람불가
+            .input-group
+              .name-group
+                h5 국가 : 
+              input.form-control(type='text ', placeholder='ex) 한국 ', style='margin-left:10px ', name='nation')
+            .input-group
+              .name-group
+                h5 배급사 : 
+              input.form-control(type='text ', placeholder='ex) 롯데쇼핑(주)롯데엔터테인먼트 ', style='margin-left:10px ', name='company')
+            .input-group
+              .name-group
+                h5 예상별점 : 
+              input.form-control(type='text ', placeholder='ex) 7.74 ', style='margin-left:10px ', name='starScore')
+            .input-group
+              .name-group
+                h5 별점참여수 : 
+              input.form-control(type='text ', placeholder='ex) 37345 ', style='margin-left:10px ', name='userCount')
+            .input-group
+              .name-group
+                h5 개봉 전 스크린 수 : 
+              input.form-control(type='text ', placeholder='ex) 91 ', style='margin-left:10px ', name='screen')
+            .input-group
+              .name-group
+                h5 개봉 전 관람객 수 : 
+              input.form-control(type='text ', placeholder='ex) 21749 ', style='margin-left:10px ', name='audience')
+            .input-group
+              .name-group
+                h5 개봉 전 상영횟수 : 
+              input.form-control(type=' text ', placeholder='ex) 99 ', style='margin-left:10px ', name='show')
+            .input-group
+              p(style='color: red; margin-top:1em') * 미입력 시 최솟값으로 설정합니다.
+              span.input-group-btn(style='margin-left:auto ')
+                button.btn.btn-secondary(type='button ', name='inputData', onclick="this.disabled=true; javascript: submitForm()") Go!
+                //- #loader.centered(style='display:none;')
+                script.
+                  function submitForm() {
+                    document.getElementById('startPrediction').submit();
+                    document.getElementById("loader").style.display = "block";
+                    document.getElementById("inputBox").style.opacity = 0.3;
+                  }
+
+    // /.row
+    // /.container
+    // Footer
+    footer.py-5.bg-dark
+      .container
+        p.m-0.text-center.text-white Copyright © mobisys 2018
+      // /.container
+      // Bootstrap core JavaScript
+      script(src='vendor/jquery/jquery.min.js ')
+      script(src='vendor/bootstrap/js/bootstrap.bundle.min.js ')

@@ -1,0 +1,129 @@
+random_forest_D0_random_searching_console_log.txt
+
+'rank_test_score': array([ 93,  25,  32,  57, 100,  52,  22,  41,  87,  97,  18,  68,  49,
+        70,  30,   8,  50,  54,  69,  67,  46,  43,  56,  55,  35,  47,
+        90,  91,  78,   3,   9,  26,  96,  24,  63,   1,  79,   5,  19,
+        65,  94,  84,  82,  10,  13,  15,  76,  74,  34,  37,  85,  98,
+        12,  42,  89,  29,  77,  17,  60,  39,  92,  72,  27,  59,   4,
+        95,  88,  80,  50,  23,  16,  83,  99,  11,   6,  61,  81,  45,
+        71,  53,  38,  64,  66,  14,  75,  33,  48,  21,  20,  36,  73,
+        31,  28,  62,  44,  86,   7,   2,  40,  58], dtype=int32),
+
+ 'params': [
+1	{'n_estimators': 3000, 'min_samples_split': 7, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 100, 'bootstrap': False}, 	93
+2	{'n_estimators': 100, 'min_samples_split': 17, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 20, 'bootstrap': True},   	25
+3	{'n_estimators': 10, 'min_samples_split': 5, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 80, 'bootstrap': True}, 	32
+4	{'n_estimators': 1000, 'min_samples_split': 19, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 40, 'bootstrap': False},    57
+5	{'n_estimators': 2000, 'min_samples_split': 3, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 40, 'bootstrap': False}, 	100 
+6	{'n_estimators': 500, 'min_samples_split': 3, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 90, 'bootstrap': True}, 	52 
+7	{'n_estimators': 2000, 'min_samples_split': 7, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 120, 'bootstrap': False}, 	22 
+8	{'n_estimators': 300, 'min_samples_split': 5, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 70, 'bootstrap': True},	41 
+9	{'n_estimators': 100, 'min_samples_split': 19, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 80, 'bootstrap': False}, 	87 
+10	{'n_estimators': 10, 'min_samples_split': 3, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 40, 'bootstrap': False}, 	97 
+11	{'n_estimators': 1000, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 100, 'bootstrap': False}, 	18 
+12	{'n_estimators': 500, 'min_samples_split': 11, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 150, 'bootstrap': True}, 	68 
+13	{'n_estimators': 100, 'min_samples_split': 3, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 30, 'bootstrap': True}, 	49
+14	{'n_estimators': 3000, 'min_samples_split': 13, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 20, 'bootstrap': True}, 	70
+15	{'n_estimators': 100, 'min_samples_split': 13, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 40, 'bootstrap': True}, 	30 
+16	{'n_estimators': 2000, 'min_samples_split': 5, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 80, 'bootstrap': True}, 	8 
+17	{'n_estimators': 100, 'min_samples_split': 7, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 80, 'bootstrap': True}, 	50 
+18	{'n_estimators': 1000, 'min_samples_split': 19, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 100, 'bootstrap': True}, 	54 
+19	{'n_estimators': 50, 'min_samples_split': 13, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 150, 'bootstrap': False}, 	69 
+20	{'n_estimators': 400, 'min_samples_split': 13, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 100, 'bootstrap': True}, 	67 
+21	{'n_estimators': 2000, 'min_samples_split': 7, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': None, 'bootstrap': True}, 46 
+22	{'n_estimators': 1500, 'min_samples_split': 3, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 40, 'bootstrap': True}, 	43 
+23	{'n_estimators': 100, 'min_samples_split': 3, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}, 	56 
+24	{'n_estimators': 100, 'min_samples_split': 3, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 50, 'bootstrap': True}, 	55 
+25	{'n_estimators': 1000, 'min_samples_split': 11, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 30, 'bootstrap': True}, 	35 
+26	{'n_estimators': 100, 'min_samples_split': 7, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 20, 'bootstrap': True}, 	47
+27	{'n_estimators': 300, 'min_samples_split': 11, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': None, 'bootstrap': False}, 90 
+28	{'n_estimators': 2000, 'min_samples_split': 7, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 40, 'bootstrap': False}, 	91 
+29	{'n_estimators': 200, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 60, 'bootstrap': True}, 	78 
+30	{'n_estimators': 1000, 'min_samples_split': 3, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 60, 'bootstrap': True}, 	3 	---------------------
+31	{'n_estimators': 400, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': None, 'bootstrap': True}, 	9 
+32	{'n_estimators': 300, 'min_samples_split': 17, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 80, 'bootstrap': False}, 	26 
+33	{'n_estimators': 50, 'min_samples_split': 17, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 30, 'bootstrap': False}, 	96 
+34	{'n_estimators': 200, 'min_samples_split': 19, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': None, 'bootstrap': True}, 24 
+35	{'n_estimators': 500, 'min_samples_split': 19, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 20, 'bootstrap': False}, 	63 
+36	{'n_estimators': 50, 'min_samples_split': 11, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 20, 'bootstrap': False}, 	1 	----------------------
+37	{'n_estimators': 1000, 'min_samples_split': 17, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 150, 'bootstrap': True}, 	79 
+38	{'n_estimators': 200, 'min_samples_split': 5, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 20, 'bootstrap': False}, 	5	---------------------- 
+39	{'n_estimators': 400, 'min_samples_split': 3, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 30, 'bootstrap': False}, 	19
+40	{'n_estimators': 400, 'min_samples_split': 13, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 40, 'bootstrap': True},	65 
+41	{'n_estimators': 100, 'min_samples_split': 7, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 100, 'bootstrap': False}, 	94 
+42	{'n_estimators': 3000, 'min_samples_split': 19, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 150, 'bootstrap': False}, 	84 
+43	{'n_estimators': 1000, 'min_samples_split': 13, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 50, 'bootstrap': False}, 	82 
+44	{'n_estimators': 2000, 'min_samples_split': 7, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 150, 'bootstrap': True}, 	10 
+45	{'n_estimators': 3000, 'min_samples_split': 3, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 80, 'bootstrap': False}, 	13 
+46	{'n_estimators': 500, 'min_samples_split': 17, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 50, 'bootstrap': True}, 	15 
+47	{'n_estimators': 50, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 30, 'bootstrap': True}, 	76 	
+48	{'n_estimators': 400, 'min_samples_split': 17, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 60, 'bootstrap': True}, 	74 
+49	{'n_estimators': 2000, 'min_samples_split': 11, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 20, 'bootstrap': True}, 	34 
+50	{'n_estimators': 300, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 40, 'bootstrap': False}, 	37 
+51	{'n_estimators': 200, 'min_samples_split': 17, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 30, 'bootstrap': False}, 	85 
+52	{'n_estimators': 1500, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 70, 'bootstrap': False}, 	98
+53	{'n_estimators': 200, 'min_samples_split': 17, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 150, 'bootstrap': True}, 	12
+54	{'n_estimators': 50, 'min_samples_split': 3, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': False}, 	42
+55	{'n_estimators': 3000, 'min_samples_split': 11, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 60, 'bootstrap': False}, 	89
+56	{'n_estimators': 2000, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 100, 'bootstrap': True}, 	29
+57	{'n_estimators': 3000, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 90, 'bootstrap': True},	77
+58	{'n_estimators': 1000, 'min_samples_split': 17, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}, 	17
+59	{'n_estimators': 1000, 'min_samples_split': 17, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 70, 'bootstrap': True}, 	60
+60	{'n_estimators': 400, 'min_samples_split': 5, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 20, 'bootstrap': True}, 	39
+61	{'n_estimators': 500, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 40, 'bootstrap': False}, 	92
+62	{'n_estimators': 500, 'min_samples_split': 13, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 120, 'bootstrap': True}, 	72
+63	{'n_estimators': 300, 'min_samples_split': 11, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 20, 'bootstrap': True}, 	27
+64	{'n_estimators': 300, 'min_samples_split': 19, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': None, 'bootstrap': True}, 	59
+65	{'n_estimators': 200, 'min_samples_split': 3, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 150, 'bootstrap': False}, 	4	-------------------
+66	{'n_estimators': 500, 'min_samples_split': 5, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': False}, 	95
+67	{'n_estimators': 1500, 'min_samples_split': 7, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 50, 'bootstrap': False}, 	88
+68	{'n_estimators': 500, 'min_samples_split': 19, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 90, 'bootstrap': True}, 	80
+69	{'n_estimators': 100, 'min_samples_split': 7, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': None, 'bootstrap': True}, 	50
+70	{'n_estimators': 200, 'min_samples_split': 19, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 120, 'bootstrap': True}, 	23
+71	{'n_estimators': 1000, 'min_samples_split': 19, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 80, 'bootstrap': True}, 	16
+72	{'n_estimators': 200, 'min_samples_split': 19, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 120, 'bootstrap': False}, 	83
+73	{'n_estimators': 100, 'min_samples_split': 5, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 120, 'bootstrap': False}, 	99  
+74	{'n_estimators': 2000, 'min_samples_split': 19, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 150, 'bootstrap': True}, 	11
+75	{'n_estimators': 400, 'min_samples_split': 3, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 40, 'bootstrap': True}, 	6
+76	{'n_estimators': 200, 'min_samples_split': 2, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 30, 'bootstrap': True}, 	61
+77	{'n_estimators': 10, 'min_samples_split': 13, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 40, 'bootstrap': True}, 	81
+78	{'n_estimators': 10, 'min_samples_split': 5, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 90, 'bootstrap': False}, 	45
+79	{'n_estimators': 10, 'min_samples_split': 17, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 80, 'bootstrap': True}, 	71
+80	{'n_estimators': 300, 'min_samples_split': 11, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 100, 'bootstrap': True}, 	53
+81	{'n_estimators': 500, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}, 	38
+82	{'n_estimators': 400, 'min_samples_split': 19, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 70, 'bootstrap': False}, 	64
+83	{'n_estimators': 400, 'min_samples_split': 19, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 50, 'bootstrap': False}, 	66
+84	{'n_estimators': 1000, 'min_samples_split': 19, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 90, 'bootstrap': True}, 	14
+85	{'n_estimators': 1500, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 60, 'bootstrap': True},	75
+86	 {'n_estimators': 100, 'min_samples_split': 5, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 90, 'bootstrap': True},	33
+87	 {'n_estimators': 3000, 'min_samples_split': 5, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 150, 'bootstrap': True},	48
+88	 {'n_estimators': 3000, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 60, 'bootstrap': False},	21
+89	 {'n_estimators': 1500, 'min_samples_split': 7, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 90, 'bootstrap': False}, 	20
+90	{'n_estimators': 50, 'min_samples_split': 19, 'min_samples_leaf': 4, 'max_features': 'auto', 'max_depth': 40, 'bootstrap': True},	36
+91	 {'n_estimators': 50, 'min_samples_split': 11, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 40, 'bootstrap': False},	73
+92	 {'n_estimators': 200, 'min_samples_split': 11, 'min_samples_leaf': 4, 'max_features': 'sqrt', 'max_depth': 70, 'bootstrap': False},	31
+93	 {'n_estimators': 2000, 'min_samples_split': 11, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 30, 'bootstrap': False},	28
+94	 {'n_estimators': 400, 'min_samples_split': 19, 'min_samples_leaf': 3, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': False},	62
+95	 {'n_estimators': 1000, 'min_samples_split': 7, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 80, 'bootstrap': True},	44
+96	 {'n_estimators': 3000, 'min_samples_split': 17, 'min_samples_leaf': 2, 'max_features': 'auto', 'max_depth': 90, 'bootstrap': False},	86
+97	 {'n_estimators': 200, 'min_samples_split': 3, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 150, 'bootstrap': True},	7
+98	 {'n_estimators': 50, 'min_samples_split': 11, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 70, 'bootstrap': False},	2	-----------------
+99	 {'n_estimators': 3000, 'min_samples_split': 17, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 150, 'bootstrap': False},	40
+100	 {'n_estimators': 1000, 'min_samples_split': 13, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 10, 'bootstrap': True}], 	58
+
+
+36	{'n_estimators': 50, 'min_samples_split': 11, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 20, 'bootstrap': False}, 	1 	----------------------
+98	 {'n_estimators': 50, 'min_samples_split': 11, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 70, 'bootstrap': False},	2	----------------------
+30	{'n_estimators': 1000, 'min_samples_split': 3, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 60, 'bootstrap': True}, 	3 	----------------------
+65	{'n_estimators': 200, 'min_samples_split': 3, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 150, 'bootstrap': False}, 	4	----------------------
+38	{'n_estimators': 200, 'min_samples_split': 5, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 20, 'bootstrap': False}, 	5	----------------------
+
+//이 디폴트 내용 추가하셈
+'n_estimator' : [ 50, 200, 1000], //10 여기 하나 추가
+'min_sample_split' : [ 3, 5, 11], //2
+'min_samples_leaf' : [1],    //1
+'max_feature' : ['sqrt'], //auto
+'max_depth' : [20,60,70,150],     //None 추가 
+'bootstrap' : [True, False]      //T,F
+3*3*1*1*4*2 //여기에 디폴트 내용 추가
+4*4*1*2*5*2= 320 cv = 5 1600

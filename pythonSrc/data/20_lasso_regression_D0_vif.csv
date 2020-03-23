@@ -1,0 +1,9 @@
+,VIF Factor,features
+0,8.216405867091499,director_score
+1,32.27742944376678,openDt_score
+2,13.9085244180166,repGenreNm_score
+3,14.146831579031344,actor_score
+4,28.519035825421554,starScore
+5,3.860903969670698,userCount
+6,3.779219662540772,previous_show
+7,4.271266603710796,previous_audience

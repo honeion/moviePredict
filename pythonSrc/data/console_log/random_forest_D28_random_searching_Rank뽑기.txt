@@ -1,0 +1,60 @@
+'rank_test_score': 
+array([ 84,  44,  77,  51,  82,  66,  22,  18, 100,  90,  11,  72,  17,
+        30,  33,  37,  14,  63,  34,  32,  19,  62,   2,  20,  60,  70,
+        91,  89,  24,  35,  41,  40,  94,  71,  54,  21,  79,  10,   3,
+        74,  86,  98,  96,  42,   6,  53,   4,  78,  28,   9,  97,  93,
+        50,  23,  92,  52,   5,  48,  49,  25,  85,  75,  27,  64,   7,
+        87,  88,  80,  14,  67,  68,  99,  83,  59,  39,  55,  81,  43,
+        76,  61,  45,  46,  58,  65,  12,  56,  57,   1,   8,  69,  26,
+        29,  13,  47,  16,  95,  36,  31,  38,  73])
+
+#  default 값
+#      n_estimators = 10, criterion = mse(mean squared errer), max_features = "auto"
+#      max_depth = None, min_samples_split = 2, min_samples_leaf = 1
+#      min_weight_fraction_leaf = 0, max_leaf_nodes = None, min_impurity_decrease = 0
+#      bootstrap = True, oob_score = False, n_jobs = 1, verbose = 0, warm_start = False
+#      rf = RandomForestRegressor(n_estimators = 1000, random_state = 42,oob_score=True)
+{'n_estimators': 3000, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 60, 'bootstrap': False}, 	88  1 --이게 베스트
+{'n_estimators': 100, 'min_samples_split': 3, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 10, 'bootstrap': True}, 	23  2 ----------
+{'n_estimators': 400, 'min_samples_split': 3, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 30, 'bootstrap': False}, 	39  3 ----------
+{'n_estimators': 50, 'min_samples_split': 2, 'min_samples_leaf': 3, 'max_features': 'auto', 'max_depth': 30, 'bootstrap': True}, 	47  4 ---------
+{'n_estimators': 3000, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'auto', 'max_depth': 90, 'bootstrap': True}, 	57  5 ---------
+{'n_estimators': 3000, 'min_samples_split': 3, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 80, 'bootstrap': False}, 	45  6 ----------
+ {'n_estimators': 200, 'min_samples_split': 3, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 150, 'bootstrap': False}, 	65  7 ---------
+{'n_estimators': 1500, 'min_samples_split': 7, 'min_samples_leaf': 2, 'max_features': 'sqrt', 'max_depth': 90, 'bootstrap': False}, 	89  8 ---------
+{'n_estimators': 300, 'min_samples_split': 7, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 40, 'bootstrap': False}, 	50  9 ---------
+{'n_estimators': 200, 'min_samples_split': 5, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': 20, 'bootstrap': False}, 	38  10 -----------
+
+'n_estimator' : [ 50, 100, 200, 300, 400, 1500, 3000],
+'min_sample_split' : [ 2, 3, 5, 7],
+'min_samples_leaf' : [1,2,3],
+'max_feature' : ['sqrt','auto'],
+'max_depth' : [10,20,30,40,60,80,90,150], //None 추가
+'bootstrap' : [True, False]
+8*4*3*2*9*2 = 3456, cv = 5, 17280 번 -- 이거였으면 97개짜리 4000분 정도 걸렸을 듯
+{'bootstrap': True,
+     'criterion': 'mse',
+     'max_depth': None,
+     'max_features': 'auto',
+     'max_leaf_nodes': None,
+     'min_impurity_decrease': 0.0,
+     'min_impurity_split': None,
+     'min_samples_leaf': 1,
+     'min_samples_split': 2,
+     'min_weight_fraction_leaf': 0.0,
+     'n_estimators': 10,
+     'n_jobs': 1,
+     'oob_score': False,
+     'random_state': 42,
+     'verbose': 0,
+     'warm_start': False}
+
+음 5등까지만 고려해보자.
+'n_estimator' : [ 50, 100, 400, 3000], //10 여기 하나 추가
+'min_sample_split' : [ 2, 3, 7], //2
+'min_samples_leaf' : [1,2,3],    //1
+'max_feature' : ['sqrt','auto'], //auto
+'max_depth' : [10,30,60,90],     //None 추가 
+'bootstrap' : [True, False]      //T,F
+5*3*3*2*5*2 = 900 cv = 5, 4500번
+
