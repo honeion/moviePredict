@@ -335,7 +335,6 @@ a23 = a13.groupby("actor3").agg({"final_audience": np.sum})
 a24 = a14.groupby("actor4").agg({"final_audience": np.sum})
 a25 = a15.groupby("actor5").agg({"final_audience": np.sum})
 a26 = a16.groupby("actor6").agg({"final_audience": np.sum})
-                        ...
 actor = actor.merge(actor2,how="outer",on="movieCd")
 actor["actor_score"] = actor["final_audience_y_x_x"]+ actor["final_audience_y_y_x"] + actor["final_audience_y_x"]+\
                         actor["final_audience_y_x_y"]+ actor["final_audience_y_y_y"] + actor["final_audience_y_y"]
